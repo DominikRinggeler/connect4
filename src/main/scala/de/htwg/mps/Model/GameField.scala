@@ -4,7 +4,7 @@ package de.htwg.mps.Model
  * Created by dominikringgeler on 12.10.15.
  */
 class GameField {
-  // Test
+  // Test 2
 
   def getFieldStatus(row: Int,column: Int): Unit ={ //GameToken
 
