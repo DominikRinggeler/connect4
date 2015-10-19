@@ -1,14 +1,14 @@
 package de.htwg.mps.Model
-
 /**
  * Created by dominikringgeler on 12.10.15.
  */
-class HumanPlayer {
+class HumanPlayer (val color: Int, val name: String){
 
-  def makeTurn{}
-  def setColor{}
-  def getColor{}
-  def getName{}
-  def setName{}
+  def makeTurn(column:Int): Unit ={
+
+    val token = new GameToken(this, color)
+    GameField.setFieldToken(column, token)
+    
+  }
 
 }
