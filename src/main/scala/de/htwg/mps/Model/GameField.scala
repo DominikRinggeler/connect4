@@ -35,8 +35,8 @@ object GameField {
     null
   }
 
-  def setFieldToken(column: Int,gameToken: GameToken): Unit ={
-    if (column > 0 && column < this.columns){
+  def setFieldToken(column: Int,gameToken: GameToken): Boolean ={
+    if (column >= 0 && column < this.columns){
       var rowIndex:Int =0
 
       while (getFieldStatus(rowIndex,column) && rowIndex < rows)
@@ -45,15 +45,16 @@ object GameField {
       if(rowIndex<rows) {
         fields(rowIndex)(column)=gameToken
         println("Token erfolgreich gesetzt!")
+        true
       }
-      else println("Spalte ist bereits voll! Neue Spalte wählen...")
-
-      /*
-        for(index <- 0 until rows; if(!getFieldStatus(index,column)))
-           getFieldStatus(index+1)
+      else {
+        println("Spalte ist bereits voll! Neue Spalte wählen...")
+        false
       }
-      */
     }
-    else println("Spalte nicht mehr im Feld! Bitte anderes Feld wählen...")
+    else {
+      println("Spalte nicht mehr im Feld! Bitte anderes Feld wählen...")
+      false
+    }
   }
 }

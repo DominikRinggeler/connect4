@@ -10,5 +10,4 @@ object Connect4 extends App {
 
   val tui = new Tui(new GameController)
   tui.processInputLine();
-
 }

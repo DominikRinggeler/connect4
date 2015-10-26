@@ -12,7 +12,7 @@ class GameController extends Observable{
   var players:List[HumanPlayer] = List()
 
   def addPlayer(color:Int,name:String): Unit ={
-     new HumanPlayer(color,name)::players
+     players = new HumanPlayer(color,name)::players
   }
 
 }

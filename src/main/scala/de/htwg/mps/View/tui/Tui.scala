@@ -3,7 +3,7 @@ package de.htwg.mps.View.tui
 import java.util.{Observable, Observer}
 
 import de.htwg.mps.Controller.GameController
-import de.htwg.mps.Model.GameField
+import de.htwg.mps.Model.{HumanPlayer, GameField}
 
 /**
  * Created by dominikringgeler on 25.10.15.
@@ -29,19 +29,49 @@ class Tui (var controller: GameController) extends Observer{
     }
   }
 
-  def processInputLine(): Unit ={
+  def processInputLine(): Unit = {
 
-    println("Hello, you are playing connect4")
+    println("Sie spielen 4-Gewinnt!\n")
 
     println("Bitte Name für Spieler 1 angeben:")
-    controller.addPlayer(1,readLine())
+    controller.addPlayer(1, readLine())
 
     println("Bitte Name für Spieler 2 angeben:")
-    controller.addPlayer(2,readLine())
+    controller.addPlayer(2, readLine())
 
     var players = controller.players
-    while(true){
-      println()
+
+    var player1 = players.last
+    var player2 = players.head
+
+    // actualize field
+    printField()
+
+    while (true) {
+
+      // Player 1
+      println(player1.name + " ist an der Reihe, bitte Spalte wählen...")
+      makeTurnAndCheck(player1)
+
+      // actualize field
+      printField()
+      // -> checkFourInARow
+
+      // Player 2
+      println(player2.name + " ist an der Reihe, bitte Spalte wählen...")
+      makeTurnAndCheck(player2)
+
+      // actualize field
+      printField()
+      // -> checkFourInARow
     }
+  }
+
+  def makeTurnAndCheck(player:HumanPlayer){
+    var isCorrect = false
+    do {
+      val input = readLine().toInt
+      isCorrect = player.makeTurn(input)
+    } while (!isCorrect)
   }
 }

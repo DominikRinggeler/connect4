@@ -4,9 +4,14 @@ package de.htwg.mps.Model
  */
 class HumanPlayer (val color: Int, val name: String){
 
-  def makeTurn(column:Int): Unit ={
+  def makeTurn(column:Int): Boolean ={
 
     val token = new GameToken(this, color)
-    GameField.setFieldToken(column, token)
+    val isCorrect = GameField.setFieldToken(column-1, token)
+    isCorrect
+  }
+
+  override def toString():String = {
+     "Name: " + name + " - Spielstein: " + color
   }
 }
