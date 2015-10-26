@@ -30,7 +30,7 @@ object GameField {
 
   def getFieldToken(row: Int,column: Int):GameToken = {
     if (getFieldStatus(row,column) ==true) {
-      fields(row)(column);
+      return fields(row)(column);
     }
     null
   }
@@ -56,5 +56,4 @@ object GameField {
     }
     else println("Spalte nicht mehr im Feld! Bitte anderes Feld wählen...")
   }
-
 }

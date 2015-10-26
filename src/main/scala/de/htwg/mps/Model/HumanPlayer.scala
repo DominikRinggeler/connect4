@@ -8,6 +8,5 @@ class HumanPlayer (val color: Int, val name: String){
 
     val token = new GameToken(this, color)
     GameField.setFieldToken(column, token)
-    
   }
 }
