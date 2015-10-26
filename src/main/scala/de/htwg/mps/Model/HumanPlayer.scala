@@ -10,5 +10,4 @@ class HumanPlayer (val color: Int, val name: String){
     GameField.setFieldToken(column, token)
     
   }
-
 }

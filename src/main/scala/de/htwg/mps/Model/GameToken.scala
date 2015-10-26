@@ -5,7 +5,6 @@ package de.htwg.mps.Model
  */
 class GameToken (val owner: HumanPlayer, val color: Int){
 
-
 }
 
 

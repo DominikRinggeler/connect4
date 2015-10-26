@@ -9,17 +9,15 @@ object GameField {
   var rows = 0
   var fields = Array.ofDim[GameToken](rows,columns)
 
-  def initializeField(rows: Int, columns: Int): Unit ={
+  def initializeField(rows: Int, columns: Int) = {
 
     this.rows= rows
     this.columns= columns
 
     fields = Array.ofDim[GameToken](columns,rows)
 
-    for(rowIndex <- 0 until rows){
-      for(columnIndex <- 0 until columns){
+    for(rowIndex <- 0 until rows; columnIndex <- 0 until columns){
         fields(rowIndex)(columnIndex)=null;
-      }
     }
   }
 
@@ -38,19 +36,25 @@ object GameField {
   }
 
   def setFieldToken(column: Int,gameToken: GameToken): Unit ={
-    if (column < 0 || column >= columns){
-      var rowIndex =0;
-      while (getFieldStatus(rowIndex,column)){
-        rowIndex=rowIndex+1;
+    if (column > 0 && column < this.columns){
+      var rowIndex:Int =0
+
+      while (getFieldStatus(rowIndex,column) && rowIndex < rows)
+        rowIndex= rowIndex+1
+
+      if(rowIndex<rows) {
+        fields(rowIndex)(column)=gameToken
+        println("Token erfolgreich gesetzt!")
       }
-      fields(rowIndex)(column)=gameToken
+      else println("Spalte ist bereits voll! Neue Spalte wählen...")
+
       /*
         for(index <- 0 until rows; if(!getFieldStatus(index,column)))
            getFieldStatus(index+1)
       }
       */
     }
+    else println("Spalte nicht mehr im Feld! Bitte anderes Feld wählen...")
   }
-
 
 }
