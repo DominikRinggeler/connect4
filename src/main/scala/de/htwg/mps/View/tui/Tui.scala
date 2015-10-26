@@ -1,6 +1,6 @@
 package de.htwg.mps.View.tui
 
-import java.util.{Observable, Observer}
+import java.util.{InputMismatchException, Observable, Observer}
 
 import de.htwg.mps.Controller.GameController
 import de.htwg.mps.Model.{HumanPlayer, GameField}
@@ -15,8 +15,11 @@ class Tui (var controller: GameController) extends Observer{
   def printField() = {
 
     println()
-    println(" 1 2 3 4 5 6")
-    for (rowIndex <- (0 to GameField.rows).reverse) {
+    for (i <- 0 until GameField.columns)
+      print(" " + (i+1).toString)
+
+    println()
+    for (rowIndex <- (0 to GameField.rows-1).reverse) {
       for (columnIndex <- 0 until GameField.columns) {
 
         var gtoken = GameField.getFieldToken(rowIndex,columnIndex)
@@ -27,6 +30,7 @@ class Tui (var controller: GameController) extends Observer{
       print("|")
       println()
     }
+    println()
   }
 
   def processInputLine(): Unit = {
@@ -69,9 +73,15 @@ class Tui (var controller: GameController) extends Observer{
 
   def makeTurnAndCheck(player:HumanPlayer){
     var isCorrect = false
+
     do {
-      val input = readLine().toInt
-      isCorrect = player.makeTurn(input)
-    } while (!isCorrect)
+      var input = readLine()
+      try {
+        Some(input.toInt)
+        isCorrect = player.makeTurn(input.toInt)
+      } catch {
+        case e: Exception => println("Die Eingabe ist keine korrekte Spalte! Bitte Spalte wählen...")
+      }
+    }while (!isCorrect)
   }
 }

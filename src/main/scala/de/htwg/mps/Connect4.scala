@@ -6,7 +6,7 @@ import de.htwg.mps.View.tui.Tui
 
 object Connect4 extends App {
 
-  GameField.initializeField(6,6)
+  GameField.initializeField(8,8)
 
   val tui = new Tui(new GameController)
   tui.processInputLine();
