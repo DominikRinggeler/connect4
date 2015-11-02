@@ -44,16 +44,13 @@ object GameField {
 
       if(rowIndex<rows) {
         fields(rowIndex)(column)=gameToken
-        println("Token erfolgreich gesetzt!")
         true
       }
       else {
-        println("Spalte ist bereits voll! Neue Spalte wählen...")
         false
       }
     }
     else {
-      println("Spalte nicht mehr im Feld! Bitte anderes Feld wählen...")
       false
     }
   }

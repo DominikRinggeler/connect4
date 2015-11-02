@@ -10,8 +10,4 @@ class HumanPlayer (val color: Int, val name: String){
     val isCorrect = GameField.setFieldToken(column-1, token)
     isCorrect
   }
-
-  override def toString():String = {
-     "Name: " + name + " - Spielstein: " + color
-  }
 }

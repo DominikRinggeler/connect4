@@ -43,10 +43,6 @@ class Tui (var controller: GameController) extends Observer{
     println("Bitte Name für Spieler 2 angeben:")
     controller.addPlayer(2, readLine())
 
-    var players = controller.players
-
-    var player1 = players.last
-    var player2 = players.head
 
     // actualize field
     printField()
@@ -54,31 +50,30 @@ class Tui (var controller: GameController) extends Observer{
     while (true) {
 
       // Player 1
-      println(player1.name + " ist an der Reihe, bitte Spalte wählen...")
-      makeTurnAndCheck(player1)
+      println(controller.getName + " ist an der Reihe, bitte Spalte wählen...")
+      makeTurnAndCheck()
 
       // actualize field
       printField()
       // -> checkFourInARow
 
-      // Player 2
-      println(player2.name + " ist an der Reihe, bitte Spalte wählen...")
-      makeTurnAndCheck(player2)
-
-      // actualize field
-      printField()
-      // -> checkFourInARow
     }
   }
 
-  def makeTurnAndCheck(player:HumanPlayer){
+  def makeTurnAndCheck(){
     var isCorrect = false
 
     do {
       var input = readLine()
       try {
         Some(input.toInt)
-        isCorrect = player.makeTurn(input.toInt)
+        isCorrect = controller.makeTurn(input.toInt)
+        if (isCorrect){
+          println("Token erfolgreich gesetzt!")
+        }
+        else{
+          println("Token konnte nicht gesetzt werden! Bitte neue Eingabe wählen.")
+        }
       } catch {
         case e: Exception => println("Die Eingabe ist keine korrekte Spalte! Bitte Spalte wählen...")
       }
