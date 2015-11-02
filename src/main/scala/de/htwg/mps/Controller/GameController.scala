@@ -32,7 +32,7 @@ class GameController extends Observable{
   def checkConnectFour(column:Int): Boolean ={
     val rowIndex = GameField.getRowIndex(column)
 
-    var win = checkFourInRow(rowIndex,column)
+    var win = checkFourInColumn(rowIndex,column)
 
     if(!win) {
       nextPlayers = nextPlayers.tail
@@ -46,20 +46,24 @@ class GameController extends Observable{
       true
   }
 
-  def checkFourInRow(row:Int, column:Int): Boolean ={
+  def checkFourInColumn(row:Int, column:Int): Boolean ={
 
     var countToken = 0
+    var win = false
 
     // check left row
-    for(rowIndex <- -3 until 3){
-      if(nextPlayers.head.color == GameField.getFieldToken(rowIndex+row, column).color){
+    var currentColor = nextPlayers.head.color
+    for(rowIndex <- -3 until 3 if GameField.getFieldToken(rowIndex+row, column-1)!= null){
+      var tmpColor = GameField.getFieldToken(rowIndex+row, column-1).color
+      if(currentColor == tmpColor){
         countToken= countToken+1
 
-        if(countToken >=4) return true
+        if(countToken >=4)
+          win = true
       }
       else
         countToken=0
     }
-    false
+    win
   }
 }
