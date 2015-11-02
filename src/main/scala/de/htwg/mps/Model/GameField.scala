@@ -37,10 +37,8 @@ object GameField {
 
   def setFieldToken(column: Int,gameToken: GameToken): Boolean ={
     if (column >= 0 && column < this.columns){
-      var rowIndex:Int =0
 
-      while (getFieldStatus(rowIndex,column) && rowIndex < rows)
-        rowIndex= rowIndex+1
+      val rowIndex = getRowIndex(column)
 
       if(rowIndex<rows) {
         fields(rowIndex)(column)=gameToken
@@ -53,5 +51,13 @@ object GameField {
     else {
       false
     }
+  }
+
+  def getRowIndex(column: Int): Int = {
+    var rowIndex:Int =0
+
+    while (getFieldStatus(rowIndex,column) && rowIndex < rows)
+      rowIndex= rowIndex+1
+    rowIndex
   }
 }

@@ -46,23 +46,23 @@ class Tui (var controller: GameController) extends Observer{
 
     // actualize field
     printField()
+    var win = false
 
-    while (true) {
+    while (!win) {
 
       // Player 1
       println(controller.getName + " ist an der Reihe, bitte Spalte wählen...")
-      makeTurnAndCheck()
+      win = makeTurnAndCheck()
 
       // actualize field
       printField()
-      // -> checkFourInARow
 
     }
   }
 
-  def makeTurnAndCheck(){
+  def makeTurnAndCheck():Boolean = {
+    var win = false
     var isCorrect = false
-
     do {
       var input = readLine()
       try {
@@ -70,6 +70,7 @@ class Tui (var controller: GameController) extends Observer{
         isCorrect = controller.makeTurn(input.toInt)
         if (isCorrect){
           println("Token erfolgreich gesetzt!")
+          win = controller.checkConnectFour(input.toInt)
         }
         else{
           println("Token konnte nicht gesetzt werden! Bitte neue Eingabe wählen.")
@@ -78,5 +79,6 @@ class Tui (var controller: GameController) extends Observer{
         case e: Exception => println("Die Eingabe ist keine korrekte Spalte! Bitte Spalte wählen...")
       }
     }while (!isCorrect)
+    win
   }
 }
