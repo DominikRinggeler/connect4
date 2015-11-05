@@ -33,6 +33,12 @@ class GameController extends Observable{
     val rowIndex = GameField.getRowIndex(column)
 
     var win = checkFourInColumn(rowIndex,column)
+    if(!win) {
+      win = checkFourInRow(rowIndex,column)
+    }
+    if(!win) {
+      win = checkFourDiagonal(rowIndex,column)
+    }
 
     if(!win) {
       nextPlayers = nextPlayers.tail
@@ -51,10 +57,49 @@ class GameController extends Observable{
     var countToken = 0
     var win = false
 
-    // check left row
     var currentColor = nextPlayers.head.color
     for(rowIndex <- -3 until 3 if GameField.getFieldToken(rowIndex+row, column-1)!= null){
       var tmpColor = GameField.getFieldToken(rowIndex+row, column-1).color
+      if(currentColor == tmpColor){
+        countToken= countToken+1
+
+        if(countToken >=4)
+          win = true
+      }
+      else
+        countToken=0
+    }
+    win
+  }
+
+  def checkFourInRow(row:Int, column:Int): Boolean ={
+
+    var countToken = 0
+    var win = false
+
+    var currentColor = nextPlayers.head.color
+    for(colIndex <- -3 until 3 if GameField.getFieldToken(row, colIndex+column-1)!= null){
+      var tmpColor = GameField.getFieldToken(row, colIndex+column-1).color
+      if(currentColor == tmpColor){
+        countToken= countToken+1
+
+        if(countToken >=4)
+          win = true
+      }
+      else
+        countToken=0
+    }
+    win
+  }
+
+  def checkFourDiagonal(row:Int, column:Int): Boolean ={
+
+    var countToken = 0
+    var win = false
+
+    var currentColor = nextPlayers.head.color
+    for(index <- -3 until 3 if GameField.getFieldToken(index+row, index+column-1)!= null){
+      var tmpColor = GameField.getFieldToken(index+row, index+column-1).color
       if(currentColor == tmpColor){
         countToken= countToken+1
 

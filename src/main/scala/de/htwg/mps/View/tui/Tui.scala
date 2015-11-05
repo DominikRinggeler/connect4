@@ -58,6 +58,8 @@ class Tui (var controller: GameController) extends Observer{
       printField()
 
     }
+    println("Das Spiel ist Aus! "+controller.getName + " hat gewonnen.")
+
   }
 
   def makeTurnAndCheck():Boolean = {
