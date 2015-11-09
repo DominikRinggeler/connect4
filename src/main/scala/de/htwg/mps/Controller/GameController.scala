@@ -36,7 +36,10 @@ class GameController extends Observable{
       win = checkFourInRow(rowIndexLastToken,column)
     }
     if(!win) {
-      //win = checkFourDiagonal(rowIndex,column)
+      win = checkFourDiagonalLeftRight(rowIndexLastToken,column)
+    }
+    if(!win) {
+      win = checkFourDiagonalRightLeft(rowIndexLastToken,column)
     }
 
     if(!win) {
@@ -57,7 +60,7 @@ class GameController extends Observable{
     var win = false
 
     var currentColor = nextPlayers.head.color
-    for(rowIndex <- -3 until 3 if GameField.getFieldToken(rowIndex+row, column)!= null){
+    for(rowIndex <- -3 until 4 if GameField.getFieldToken(rowIndex+row, column)!= null){
       var tmpColor = GameField.getFieldToken(rowIndex+row, column).color
       if(currentColor == tmpColor){
         countToken= countToken+1
@@ -78,7 +81,7 @@ class GameController extends Observable{
 
     var currentColor = nextPlayers.head.color
 
-    for(colIndex <- -3 until 4 if column+colIndex >= 0 && column+colIndex <= GameField.columns && GameField.getFieldToken(row, column + colIndex) != null){
+    for(colIndex <- -3 until 4 if GameField.getFieldToken(row, column + colIndex) != null){
       var tmpColor = GameField.getFieldToken(row, column + colIndex).color
       if (currentColor == tmpColor) {
         countToken = countToken + 1
@@ -92,14 +95,34 @@ class GameController extends Observable{
     win
   }
 
-  def checkFourDiagonal(row:Int, column:Int): Boolean ={
+  def checkFourDiagonalLeftRight(row:Int, column:Int): Boolean ={
 
     var countToken = 0
     var win = false
 
     var currentColor = nextPlayers.head.color
-    for(index <- -3 until 4 if index >= 0 || GameField.getFieldToken(index+row, index+column-1)!= null){
-      var tmpColor = GameField.getFieldToken(index+row, index+column-1).color
+    for(index <- -3 until 4 if GameField.getFieldToken(index+row, index+column)!= null){
+      var tmpColor = GameField.getFieldToken(index+row, index+column).color
+      if(currentColor == tmpColor){
+        countToken= countToken+1
+
+        if(countToken >=4)
+          win = true
+      }
+      else
+        countToken=0
+    }
+    win
+  }
+
+  def checkFourDiagonalRightLeft(row:Int, column:Int): Boolean ={
+
+    var countToken = 0
+    var win = false
+
+    var currentColor = nextPlayers.head.color
+    for(index <- -3 until 4 if GameField.getFieldToken((-1*index)+row, index+column)!= null){
+      var tmpColor = GameField.getFieldToken((-1*index)+row, index+column).color
       if(currentColor == tmpColor){
         countToken= countToken+1
 

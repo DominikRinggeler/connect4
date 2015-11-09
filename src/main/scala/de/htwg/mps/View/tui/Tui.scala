@@ -63,10 +63,10 @@ class Tui (var controller: GameController) extends Observer{
   }
 
   def makeTurnAndCheck():Boolean = {
-    var win = false
     var isCorrect = false
+    var input = ""
     do {
-      var input = readLine()
+      input = readLine()
       try {
         Some(input.toInt)
         isCorrect = controller.makeTurn(input.toInt-1)
@@ -79,9 +79,7 @@ class Tui (var controller: GameController) extends Observer{
       } catch {
         case e: Exception => println("Die Eingabe ist keine korrekte Spalte! Bitte Spalte wählen...")
       }
-      if(isCorrect)
-        win = controller.checkConnectFour(input.toInt-1)
     }while (!isCorrect)
-    win
+    return controller.checkConnectFour(input.toInt-1)
   }
 }
