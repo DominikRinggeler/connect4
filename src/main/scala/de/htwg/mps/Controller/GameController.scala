@@ -22,7 +22,6 @@ class GameController extends Observable{
   def makeTurn(col: Int): Boolean={
     var isCorrect = nextPlayers.head.makeTurn(col)
     isCorrect
-
   }
 
   def getName(): String={
@@ -30,14 +29,14 @@ class GameController extends Observable{
   }
 
   def checkConnectFour(column:Int): Boolean ={
-    val rowIndex = GameField.getRowIndex(column)
+    val rowIndexLastToken = GameField.getRowIndex(column)-1
 
-    var win = checkFourInColumn(rowIndex,column)
+    var win = checkFourInColumn(rowIndexLastToken,column)
     if(!win) {
-      win = checkFourInRow(rowIndex,column)
+      win = checkFourInRow(rowIndexLastToken,column)
     }
     if(!win) {
-      win = checkFourDiagonal(rowIndex,column)
+      //win = checkFourDiagonal(rowIndex,column)
     }
 
     if(!win) {
@@ -58,8 +57,8 @@ class GameController extends Observable{
     var win = false
 
     var currentColor = nextPlayers.head.color
-    for(rowIndex <- -3 until 3 if GameField.getFieldToken(rowIndex+row, column-1)!= null){
-      var tmpColor = GameField.getFieldToken(rowIndex+row, column-1).color
+    for(rowIndex <- -3 until 3 if GameField.getFieldToken(rowIndex+row, column)!= null){
+      var tmpColor = GameField.getFieldToken(rowIndex+row, column).color
       if(currentColor == tmpColor){
         countToken= countToken+1
 
@@ -78,16 +77,17 @@ class GameController extends Observable{
     var win = false
 
     var currentColor = nextPlayers.head.color
-    for(colIndex <- -3 until 3 if GameField.getFieldToken(row, colIndex+column-1)!= null){
-      var tmpColor = GameField.getFieldToken(row, colIndex+column-1).color
-      if(currentColor == tmpColor){
-        countToken= countToken+1
 
-        if(countToken >=4)
+    for(colIndex <- -3 until 4 if column+colIndex >= 0 && column+colIndex <= GameField.columns && GameField.getFieldToken(row, column + colIndex) != null){
+      var tmpColor = GameField.getFieldToken(row, column + colIndex).color
+      if (currentColor == tmpColor) {
+        countToken = countToken + 1
+
+        if (countToken >= 4)
           win = true
       }
       else
-        countToken=0
+        countToken = 0
     }
     win
   }
@@ -98,7 +98,7 @@ class GameController extends Observable{
     var win = false
 
     var currentColor = nextPlayers.head.color
-    for(index <- -3 until 3 if GameField.getFieldToken(index+row, index+column-1)!= null){
+    for(index <- -3 until 4 if index >= 0 || GameField.getFieldToken(index+row, index+column-1)!= null){
       var tmpColor = GameField.getFieldToken(index+row, index+column-1).color
       if(currentColor == tmpColor){
         countToken= countToken+1

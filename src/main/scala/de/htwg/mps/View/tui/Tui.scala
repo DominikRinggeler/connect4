@@ -69,7 +69,7 @@ class Tui (var controller: GameController) extends Observer{
       var input = readLine()
       try {
         Some(input.toInt)
-        isCorrect = controller.makeTurn(input.toInt)
+        isCorrect = controller.makeTurn(input.toInt-1)
         if (isCorrect){
           println("Token erfolgreich gesetzt!")
         }
@@ -79,7 +79,8 @@ class Tui (var controller: GameController) extends Observer{
       } catch {
         case e: Exception => println("Die Eingabe ist keine korrekte Spalte! Bitte Spalte wählen...")
       }
-      win = controller.checkConnectFour(input.toInt)
+      if(isCorrect)
+        win = controller.checkConnectFour(input.toInt-1)
     }while (!isCorrect)
     win
   }
