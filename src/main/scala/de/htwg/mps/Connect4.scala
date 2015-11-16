@@ -27,8 +27,12 @@ object Connect4 extends App {
 
 object Connect4 extends SimpleSwingApplication {
 
+  val controller = new GameController
   var rows = 8
   GameField.initializeField(rows,rows)
+
+  controller.addPlayer(1, "Rot")
+  controller.addPlayer(2, "Gelb")
 
   val dCol = new Dimension(50, rows*45)
   val dCell = new Dimension(40, 40)
@@ -36,17 +40,13 @@ object Connect4 extends SimpleSwingApplication {
 
   lazy val ui = new FlowPanel()
 
-  for(index <- 0 until rows){
+  for(indexCol <- 0 until rows){
     val col =  new BoxPanel(Orientation.Vertical) {
       minimumSize = dCol
       maximumSize = dCol
       preferredSize = dCol
       background = Color.black
       listenTo(mouse.clicks)
-      reactions += {
-        case e: MouseClicked =>
-          println("Mouse clicked at " + e.point)
-      }
 
       for(indexRow <- 0 until rows) {
         contents += new Panel {
@@ -59,6 +59,28 @@ object Connect4 extends SimpleSwingApplication {
         peer.add(Box.createVerticalStrut(5))
 
       }
+
+
+      reactions += {
+        case e: MouseClicked =>
+          var isCorrect = false
+          var win = false
+
+          isCorrect = controller.makeTurn(indexCol)
+          if (isCorrect) {
+            win = controller.checkConnectFour(indexCol)
+
+            val rowIndexLastToken = GameField.getRowIndex(indexCol)-1
+            val numberOfContents = rows+rows-2
+            this.contents(numberOfContents-rowIndexLastToken*2).background = Color.red
+
+          }
+          if (win) {
+            println("winning")
+          }
+      }
+
+
     }
     ui.contents += col
   }
