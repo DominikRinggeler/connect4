@@ -65,6 +65,7 @@ object Connect4 extends SimpleSwingApplication {
         case e: MouseClicked =>
           var isCorrect = false
           var win = false
+          var color = controller.getColor()
 
           isCorrect = controller.makeTurn(indexCol)
           if (isCorrect) {
@@ -72,7 +73,13 @@ object Connect4 extends SimpleSwingApplication {
 
             val rowIndexLastToken = GameField.getRowIndex(indexCol)-1
             val numberOfContents = rows+rows-2
-            this.contents(numberOfContents-rowIndexLastToken*2).background = Color.red
+
+
+            if (color ==1)
+              this.contents(numberOfContents-rowIndexLastToken*2).background = Color.red
+            else if (color == 2)
+              this.contents(numberOfContents-rowIndexLastToken*2).background = Color.green
+
 
           }
           if (win) {

@@ -28,6 +28,10 @@ class GameController extends Observable{
    return nextPlayers.head.name
   }
 
+  def getColor(): Int={
+    return nextPlayers.head.color
+  }
+
   def checkConnectFour(column:Int): Boolean ={
     val rowIndexLastToken = GameField.getRowIndex(column)-1
 
