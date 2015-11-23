@@ -1,7 +1,6 @@
 package de.htwg.mps.View.tui
 
 import java.util.{InputMismatchException, Observable, Observer}
-
 import de.htwg.mps.Controller.GameController
 import de.htwg.mps.Model.{HumanPlayer, GameField}
 
