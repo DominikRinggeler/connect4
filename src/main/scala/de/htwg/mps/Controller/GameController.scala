@@ -16,7 +16,11 @@ class GameController extends Observable{
      players = new HumanPlayer(color,name)::players
      players = players.reverse
      nextPlayers = players
+  }
 
+  def removePlayers(): Unit ={
+    players = null
+    nextPlayers=null
   }
 
   def makeTurn(col: Int): Boolean={

@@ -9,7 +9,7 @@ import de.htwg.mps.Model.GameField
 
 import scala.swing
 import scala.swing.event.{ButtonClicked, MouseClicked}
-import swing._
+import scala.swing._
 
 /**
  * Created by dominikringgeler on 23.11.15.
@@ -51,29 +51,14 @@ object Gui extends SimpleSwingApplication {
 
   reactions += {
     case ButtonClicked(goButton) =>
-
-      if (fieldplayer1.text == ""){
-        Dialog.showMessage(fieldplayer1, "Bitte geheben Sie einen Name für Spieler 1 an", "Name von Spieler 1 fehlt", Dialog.Message.Error)
-      }
-      else  if (fieldplayer2.text == ""){
-        Dialog.showMessage(fieldplayer2, "Bitte geheben Sie einen Name für Spieler 2 an", "Name von Spieler 2 fehlt", Dialog.Message.Error)
-      }
-      else  if (fieldplayer2.text == fieldplayer1.text){
-        Dialog.showMessage(fieldplayer1, "Bitte geheben Sie unterschiedliche Namen an", "Namen sind identisch", Dialog.Message.Error)
-      }
-      else{
-        gameStartet = true
-        gameOver = false
-
-        controller.addPlayer(1, fieldplayer1.text)
-        controller.addPlayer(2, fieldplayer2.text)
-      }
-
+      clearField
 
   }
 
   // GameField
   lazy val gameFieldUi = new FlowPanel()
+
+  var cols = new Array[BoxPanel](GameField.columns)
 
   for(indexCol <- 0 until rows){
     val col =  new BoxPanel(Orientation.Vertical) {
@@ -92,7 +77,6 @@ object Gui extends SimpleSwingApplication {
           border = Swing.EmptyBorder(5, 5, 5, 5)
         }
         peer.add(Box.createVerticalStrut(5))
-
       }
 
       reactions += {
@@ -110,39 +94,92 @@ object Gui extends SimpleSwingApplication {
               val rowIndexLastToken = GameField.getRowIndex(indexCol)-1
               val numberOfContents = rows+rows-2
 
-
               if (color ==1)
                 this.contents(numberOfContents-rowIndexLastToken*2).background = Color.red
               else if (color == 2)
                 this.contents(numberOfContents-rowIndexLastToken*2).background = Color.green
+
+              outputText.text = controller.getName() + " ist an der Reihe!"
             }
             if (win) {
               gameOver = true
               println("winning")
-              label.text = controller.getName() + " hat gewonnen!"
+              outputText.text = controller.getName() + " hat gewonnen!"
+              controller.removePlayers()
             }
           }
       }
     }
+    cols(indexCol) = col
     gameFieldUi.contents += col
   }
 
   // Footer
-  lazy val footer = new FlowPanel(label)
-  val label = new Label {
-    text = "No button clicks registered"
+  val outputText = new Label {
+    text = "Bitte die Spielernamen eingeben und Spiel starten"
   }
+  val footer = new FlowPanel(outputText)
 
 
   def top = new MainFrame {
     title = "Hello to Connect 4!"
-    resizable = false
+    //resizable = false
 
     contents = new BoxPanel(Orientation.Vertical) {
       contents += header
       contents += gameFieldUi
       contents += footer
     }
+
+    menuBar = new MenuBar {
+      contents += new Menu("Spiel")
+      {
+        contents += new MenuItem(newGameAction)
+        contents += new MenuItem(quitAction)
+      }
+    }
+  }
+
+  val quitAction = Action("Beenden") {System.exit(0)}
+  val newGameAction = Action("Neu starten") {clearField}
+
+  def clearField(): Unit ={
+
+
+    if (fieldplayer1.text == ""){
+      Dialog.showMessage(fieldplayer1, "Bitte geheben Sie einen Name für Spieler 1 an", "Name von Spieler 1 fehlt", Dialog.Message.Error)
+    }
+    else  if (fieldplayer2.text == ""){
+      Dialog.showMessage(fieldplayer2, "Bitte geheben Sie einen Name für Spieler 2 an", "Name von Spieler 2 fehlt", Dialog.Message.Error)
+    }
+    else  if (fieldplayer2.text == fieldplayer1.text){
+      Dialog.showMessage(fieldplayer1, "Bitte geheben Sie unterschiedliche Namen an", "Namen sind identisch", Dialog.Message.Error)
+    }
+    else{
+      gameStartet = true
+      gameOver = false
+
+      controller.addPlayer(1, fieldplayer1.text)
+      controller.addPlayer(2, fieldplayer2.text)
+
+      outputText.text = controller.getName() + " ist an der Reihe"
+    }
+
+
+
+    for (col <- cols){
+      for(cellIndex <- 0 until rows) {
+        val numberOfContents = rows+rows-2
+        col.contents(numberOfContents-cellIndex*2).background = Color.white
+        GameField.initializeField(GameField.rows,GameField.columns)
+        nextPlayer
+      }
+    }
+
+  }
+
+  def nextPlayer: Unit ={
+    outputText.text = controller.getName() + " ist an der Reihe!"
   }
 }
 
