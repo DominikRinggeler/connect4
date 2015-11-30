@@ -51,8 +51,7 @@ object Gui extends SimpleSwingApplication {
 
   reactions += {
     case ButtonClicked(goButton) =>
-      clearField
-
+      initGame
   }
 
   // GameField
@@ -141,11 +140,12 @@ object Gui extends SimpleSwingApplication {
   }
 
   val quitAction = Action("Beenden") {System.exit(0)}
-  val newGameAction = Action("Neu starten") {clearField}
+  val newGameAction = Action("Neu starten") {
+    resetGame
+    initGame
+  }
 
-  def clearField(): Unit ={
-
-
+  def initGame(): Unit ={
     if (fieldplayer1.text == ""){
       Dialog.showMessage(fieldplayer1, "Bitte geheben Sie einen Name für Spieler 1 an", "Name von Spieler 1 fehlt", Dialog.Message.Error)
     }
@@ -164,15 +164,18 @@ object Gui extends SimpleSwingApplication {
 
       outputText.text = controller.getName() + " ist an der Reihe"
     }
+  }
 
+  def resetGame(): Unit ={
 
+    controller.removePlayers()
 
     for (col <- cols){
       for(cellIndex <- 0 until rows) {
         val numberOfContents = rows+rows-2
         col.contents(numberOfContents-cellIndex*2).background = Color.white
         GameField.initializeField(GameField.rows,GameField.columns)
-        nextPlayer
+        //nextPlayer
       }
     }
 
