@@ -28,6 +28,7 @@ object Gui extends SimpleSwingApplication {
 
   var gameStartet = false
   var gameOver = false
+  var counter = 0
 
   // Header
   def newField = new TextField {
@@ -51,7 +52,13 @@ object Gui extends SimpleSwingApplication {
 
   reactions += {
     case ButtonClicked(goButton) =>
+      if(gameStartet){
+        resetGame()
+      }
       initGame
+      if(gameStartet){
+        goButton.text="Neu starten"
+      }
   }
 
   // GameField
@@ -98,13 +105,18 @@ object Gui extends SimpleSwingApplication {
               else if (color == 2)
                 this.contents(numberOfContents-rowIndexLastToken*2).background = Color.green
 
-              outputText.text = controller.getName() + " ist an der Reihe!"
+              counter = counter+1
+              if(counter==(GameField.rows+1)*(GameField.columns+1)){
+                outputText.text = "Unentschieden!"
+              }else{
+                nextPlayer
+              }
             }
             if (win) {
               gameOver = true
               println("winning")
               outputText.text = controller.getName() + " hat gewonnen!"
-              controller.removePlayers()
+              goButton.text="Revanche!"
             }
           }
       }
@@ -175,10 +187,8 @@ object Gui extends SimpleSwingApplication {
         val numberOfContents = rows+rows-2
         col.contents(numberOfContents-cellIndex*2).background = Color.white
         GameField.initializeField(GameField.rows,GameField.columns)
-        //nextPlayer
       }
     }
-
   }
 
   def nextPlayer: Unit ={
