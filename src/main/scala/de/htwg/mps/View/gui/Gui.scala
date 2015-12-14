@@ -91,7 +91,7 @@ object Gui extends SimpleSwingApplication {
           if (gameStartet==true && gameOver == false){
             var isCorrect = false
             var win = false
-            var color = controller.getColor()
+            var color = controller.getColor
 
             isCorrect = controller.makeTurn(indexCol)
             if (isCorrect) {
@@ -115,7 +115,7 @@ object Gui extends SimpleSwingApplication {
             if (win) {
               gameOver = true
               println("winning")
-              outputText.text = controller.getName() + " hat gewonnen!"
+              outputText.text = controller.getName + " hat gewonnen!"
               goButton.text="Revanche!"
             }
           }
@@ -174,7 +174,7 @@ object Gui extends SimpleSwingApplication {
       controller.addPlayer(1, fieldplayer1.text)
       controller.addPlayer(2, fieldplayer2.text)
 
-      outputText.text = controller.getName() + " ist an der Reihe"
+      outputText.text = controller.getName + " ist an der Reihe"
     }
   }
 
@@ -192,7 +192,7 @@ object Gui extends SimpleSwingApplication {
   }
 
   def nextPlayer: Unit ={
-    outputText.text = controller.getName() + " ist an der Reihe!"
+    outputText.text = controller.getName + " ist an der Reihe!"
   }
 }
 
