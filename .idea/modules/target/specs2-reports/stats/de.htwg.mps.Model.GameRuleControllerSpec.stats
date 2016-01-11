@@ -1,0 +1,105 @@
+<de.htwg.mps.Model.GameRuleControllerSpec-results timestamp="1452082162564"><result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:19)" id="-535318132"><stats time="1285" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameRuleControllerSpec-results>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452082162580"><stats time="61" expectations="1" failures="1" examples="1"></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-results timestamp="1452082230609"><result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:19)" id="-535318132"><stats time="57071" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameRuleControllerSpec-results>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452082230628"><stats time="29" expectations="1" failures="1" examples="1"></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452082303224"><stats time="33" expectations="1" successes="1" examples="1"><trend><stats time="33" failures="-1" successes="1"></stats></trend></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-results timestamp="1452082614782"><result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:30)" id="-1554876572"><stats time="44" expectations="1" failures="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:41)" id="1775741839"><stats time="45" expectations="1" failures="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:58)" id="1551978471"><stats time="44" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameRuleControllerSpec-results>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452082614976"><stats time="36" expectations="4" failures="3" successes="1" examples="4"><trend><stats time="36" expectations="3" failures="3" examples="3"></stats></trend></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-results timestamp="1452082646358"><result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:30)" id="-1554876572"><stats time="43" expectations="1" failures="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:41)" id="1775741839"><stats time="42" expectations="1" failures="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:58)" id="1551978471"><stats time="42" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameRuleControllerSpec-results>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452082646427"><stats time="37" expectations="4" failures="3" successes="1" examples="4"></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-results timestamp="1452082665631"><result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:30)" id="-1554876572"><stats time="6773" expectations="1" failures="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:41)" id="1775741839"><stats time="6773" expectations="1" failures="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:58)" id="1551978471"><stats time="6772" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameRuleControllerSpec-results>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452082665676"><stats time="32" expectations="4" failures="3" successes="1" examples="4"></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-results timestamp="1452082738446"><result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:41)" id="1775741839"><stats time="2471" expectations="1" failures="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:58)" id="1551978471"><stats time="2471" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameRuleControllerSpec-results>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452082738491"><stats time="44" expectations="4" failures="2" successes="2" examples="4"><trend><stats time="44" failures="-1" successes="1"></stats></trend></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-results timestamp="1452082784250"><result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:41)" id="1775741839"><stats time="48" expectations="1" failures="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:58)" id="1551978471"><stats time="48" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameRuleControllerSpec-results>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452082784297"><stats time="35" expectations="4" failures="2" successes="2" examples="4"></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-results timestamp="1452082850167"><result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:41)" id="1775741839"><stats time="9070" expectations="1" failures="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:58)" id="1551978471"><stats time="9070" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameRuleControllerSpec-results>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452082850213"><stats time="38" expectations="4" failures="2" successes="2" examples="4"></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-results timestamp="1452083095479"><result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:19)" id="-535318132"><stats time="113" expectations="1" errors="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:41)" id="1775741839"><stats time="182" expectations="1" failures="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:58)" id="1551978471"><stats time="182" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameRuleControllerSpec-results>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452083095580"><stats time="91" expectations="4" failures="2" errors="1" successes="1" examples="4"><trend><stats time="91" errors="1" successes="-1"></stats></trend></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-results timestamp="1452083110892"><result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:19)" id="-535318132"><stats time="22" expectations="1" errors="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:41)" id="1775741839"><stats time="55" expectations="1" failures="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:58)" id="1551978471"><stats time="53" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameRuleControllerSpec-results>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452083110962"><stats time="59" expectations="4" failures="2" errors="1" successes="1" examples="4"></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-results timestamp="1452083136647"><result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:19)" id="-535318132"><stats time="57" expectations="1" failures="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:41)" id="1775741839"><stats time="55" expectations="1" failures="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:58)" id="1551978471"><stats time="53" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameRuleControllerSpec-results>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452083136708"><stats time="46" expectations="4" failures="3" successes="1" examples="4"><trend><stats time="46" failures="1" errors="-1"></stats></trend></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-results timestamp="1452083168437"><result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:19)" id="-535318132"><stats time="68" expectations="1" failures="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:41)" id="1775741839"><stats time="67" expectations="1" failures="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:58)" id="1551978471"><stats time="68" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameRuleControllerSpec-results>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452083168550"><stats time="43" expectations="4" failures="3" successes="1" examples="4"></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-results timestamp="1452083277356"><result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:19)" id="-535318132"><stats time="20" expectations="1" errors="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:41)" id="1775741839"><stats time="49" expectations="1" failures="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:58)" id="1551978471"><stats time="50" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameRuleControllerSpec-results>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452083277432"><stats time="40" expectations="4" failures="2" errors="1" successes="1" examples="4"><trend><stats time="40" failures="-1" errors="1"></stats></trend></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-results timestamp="1452083417671"><result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:19)" id="-535318132"><stats time="21954" expectations="1" errors="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:42)" id="1775741839"><stats time="22071" expectations="1" failures="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:59)" id="1551978471"><stats time="22071" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameRuleControllerSpec-results>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452083417722"><stats time="54" expectations="4" failures="2" errors="1" successes="1" examples="4"></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-results timestamp="1452083442959"><result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:19)" id="-535318132"><stats time="6468" expectations="1" errors="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:42)" id="1775741839"><stats time="6568" expectations="1" failures="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:59)" id="1551978471"><stats time="6568" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameRuleControllerSpec-results>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452083443013"><stats time="37" expectations="4" failures="2" errors="1" successes="1" examples="4"></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-results timestamp="1452083452172"><result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:19)" id="-535318132"><stats time="28" expectations="1" errors="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:42)" id="1775741839"><stats time="143" expectations="1" failures="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:59)" id="1551978471"><stats time="143" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameRuleControllerSpec-results>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452083452234"><stats time="49" expectations="4" failures="2" errors="1" successes="1" examples="4"></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-results timestamp="1452083512709"><result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:42)" id="1775741839"><stats time="51" expectations="1" failures="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:59)" id="1551978471"><stats time="50" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameRuleControllerSpec-results>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452083512784"><stats time="54" expectations="4" failures="2" successes="2" examples="4"><trend><stats time="54" errors="-1" successes="1"></stats></trend></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-results timestamp="1452083552863"><result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:41)" id="1775741839"><stats time="51" expectations="1" failures="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:58)" id="1551978471"><stats time="50" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameRuleControllerSpec-results>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452083552981"><stats time="40" expectations="4" failures="2" successes="2" examples="4"></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-results timestamp="1452083635935"><result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:41)" id="1775741839"><stats time="16739" expectations="1" failures="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:52)" id="1551978471"><stats time="16738" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameRuleControllerSpec-results>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452083636001"><stats time="42" expectations="4" failures="2" successes="2" examples="4"></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-results timestamp="1452086006375"><result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:52)" id="1551978471"><stats time="164356" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameRuleControllerSpec-results>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452086006435"><stats time="39" expectations="4" failures="1" successes="3" examples="4"><trend><stats time="39" failures="-1" successes="1"></stats></trend></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-results timestamp="1452086140279"><result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:52)" id="1551978471"><stats time="49" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameRuleControllerSpec-results>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452086140398"><stats time="47" expectations="4" failures="1" successes="3" examples="4"></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-results timestamp="1452086233945"><result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:52)" id="-416134509"><stats time="45" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameRuleControllerSpec-results>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452086234025"><stats time="46" expectations="4" failures="1" successes="3" examples="4"></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452086255897"><stats time="41" expectations="4" successes="4" examples="4"><trend><stats time="41" failures="-1" successes="1"></stats></trend></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452086550200"><stats time="46" expectations="8" successes="8" examples="8"><trend><stats time="46" expectations="4" successes="4" examples="4"></stats></trend></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452086734041"><stats time="42" expectations="9" successes="9" examples="9"><trend><stats time="42" expectations="1" successes="1" examples="1"></stats></trend></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452086765580"><stats time="40" expectations="9" successes="9" examples="9"></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452086945542"><stats time="68" expectations="8" successes="8" examples="8"><trend><stats time="68" expectations="-1" successes="-1" examples="-1"></stats></trend></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452086981974"><stats time="63" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452497197438"><stats time="43" expectations="9" successes="9" examples="9"><trend><stats time="43" expectations="1" successes="1" examples="1"></stats></trend></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452497398999"><stats time="28" expectations="10" successes="10" examples="10"><trend><stats time="28" expectations="1" successes="1" examples="1"></stats></trend></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452497537564"><stats time="39" expectations="10" successes="10" examples="10"></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1452501852880"><stats time="42" expectations="10" successes="10" examples="10"></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>

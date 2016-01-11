@@ -1,0 +1,25 @@
+<de.htwg.mps.Model.GameFieldSpec-results timestamp="1450690753183"><result location="de.htwg.mps.Model.GameFieldSpec (GameFieldSpec.scala:20)" id="-816422894"><stats time="45" expectations="1" failures="1" examples="1"></stats></result>
+<result location="de.htwg.mps.Model.GameFieldSpec (GameFieldSpec.scala:26)" id="-816422863"><stats time="38" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameFieldSpec-results>
+<de.htwg.mps.Model.GameFieldSpec-stats timestamp="1450690753200"><stats time="61" expectations="3" failures="2" successes="1" examples="3"></stats></de.htwg.mps.Model.GameFieldSpec-stats>
+<de.htwg.mps.Model.GameFieldSpec-results timestamp="1450690830046"><result location="de.htwg.mps.Model.GameFieldSpec (GameFieldSpec.scala:32)" id="-814185719"><stats time="17858" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameFieldSpec-results>
+<de.htwg.mps.Model.GameFieldSpec-stats timestamp="1450690830068"><stats time="32" expectations="3" failures="1" successes="2" examples="3"><trend><stats time="32" failures="-1" successes="1"></stats></trend></stats></de.htwg.mps.Model.GameFieldSpec-stats>
+<de.htwg.mps.Model.GameFieldSpec-results timestamp="1450691138387"><result location="de.htwg.mps.Model.GameFieldSpec (GameFieldSpec.scala:32)" id="-814185719"><stats time="48" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameFieldSpec-results>
+<de.htwg.mps.Model.GameFieldSpec-stats timestamp="1450691138426"><stats time="52" expectations="3" failures="1" successes="2" examples="3"></stats></de.htwg.mps.Model.GameFieldSpec-stats>
+<de.htwg.mps.Model.GameFieldSpec-results timestamp="1450691151292"><result location="de.htwg.mps.Model.GameFieldSpec (GameFieldSpec.scala:32)" id="-814185719"><stats time="45" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameFieldSpec-results>
+<de.htwg.mps.Model.GameFieldSpec-stats timestamp="1450691151325"><stats time="33" expectations="3" failures="1" successes="2" examples="3"></stats></de.htwg.mps.Model.GameFieldSpec-stats>
+<de.htwg.mps.Model.GameFieldSpec-results timestamp="1450691661714"><result location="de.htwg.mps.Model.GameFieldSpec (GameFieldSpec.scala:32)" id="-814185719"><stats time="44" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameFieldSpec-results>
+<de.htwg.mps.Model.GameFieldSpec-stats timestamp="1450691661771"><stats time="36" expectations="3" failures="1" successes="2" examples="3"></stats></de.htwg.mps.Model.GameFieldSpec-stats>
+<de.htwg.mps.Model.GameFieldSpec-results timestamp="1450691816987"><result location="de.htwg.mps.Model.GameFieldSpec (GameFieldSpec.scala:30)" id="514557956"><stats time="41" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameFieldSpec-results>
+<de.htwg.mps.Model.GameFieldSpec-stats timestamp="1450691817055"><stats time="34" expectations="3" failures="1" successes="2" examples="3"></stats></de.htwg.mps.Model.GameFieldSpec-stats>
+<de.htwg.mps.Model.GameFieldSpec-stats timestamp="1450691842253"><stats time="53" expectations="3" successes="3" examples="3"><trend><stats time="53" failures="-1" successes="1"></stats></trend></stats></de.htwg.mps.Model.GameFieldSpec-stats>
+<de.htwg.mps.Model.GameFieldSpec-results timestamp="1450691879470"><result location="de.htwg.mps.Model.GameFieldSpec (GameFieldSpec.scala:34)" id="710571924"><stats time="38" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameFieldSpec-results>
+<de.htwg.mps.Model.GameFieldSpec-stats timestamp="1450691879529"><stats time="41" expectations="4" failures="1" successes="3" examples="4"><trend><stats time="41" expectations="1" failures="1" examples="1"></stats></trend></stats></de.htwg.mps.Model.GameFieldSpec-stats>
+<de.htwg.mps.Model.GameFieldSpec-stats timestamp="1450691897695"><stats time="54" expectations="4" successes="4" examples="4"><trend><stats time="54" failures="-1" successes="1"></stats></trend></stats></de.htwg.mps.Model.GameFieldSpec-stats>
+<de.htwg.mps.Model.GameFieldSpec-stats timestamp="1450701434915"><stats time="98" expectations="4" successes="4" examples="4"></stats></de.htwg.mps.Model.GameFieldSpec-stats>
