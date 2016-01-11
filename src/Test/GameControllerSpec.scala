@@ -1,13 +1,17 @@
-package de.htwg.mps
+package de.htwg.mps.Model
 
 import de.htwg.mps.Controller.GameController
-import de.htwg.mps.Model.{HumanPlayer, GameToken, GameField}
+import org.junit.runner._
 import org.specs2.mutable._
+import org.specs2.runner.JUnitRunner
 
 /**
  * Created by dominikringgeler on 09.11.15.
  */
-class GameControllerSpec extends SpecificationWithJUnit{
+
+@RunWith(classOf[JUnitRunner])
+class GameControllerSpec extends Specification {
+
   "A Gamefield with set Fields" should {
 
     val controller = new GameController()

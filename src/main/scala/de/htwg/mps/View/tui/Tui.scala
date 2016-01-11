@@ -2,7 +2,7 @@ package de.htwg.mps.View.tui
 
 import java.util.{InputMismatchException, Observable, Observer}
 import de.htwg.mps.Controller.GameController
-import de.htwg.mps.Model.{HumanPlayer, GameField}
+import de.htwg.mps.Model.HumanPlayer
 
 /**
  * Created by dominikringgeler on 25.10.15.
@@ -11,18 +11,22 @@ class Tui (var controller: GameController) extends Observer{
 
   override def update(o: Observable, arg: scala.Any): Unit = ???
 
-  def printField() = {
 
+  def printField() = {
+    controller.printField
+  }
+
+    /*
     println()
-    for (i <- 0 until GameField.columns)
+    for (i <- 0 until controller.grid.columns)
       print(" " + (i+1).toString)
 
     println()
-    for (rowIndex <- (0 to GameField.rows-1).reverse) {
-      for (columnIndex <- 0 until GameField.columns) {
+    for (rowIndex <- (0 to controller.grid.rows-1).reverse) {
+      for (columnIndex <- 0 until controller.grid.columns) {
 
-        var gtoken = GameField.getFieldToken(rowIndex,columnIndex)
-        var stringVar = if(gtoken==null) " " else gtoken.color
+        var cell = controller.grid.getCell(rowIndex,columnIndex)
+        var stringVar = if(cell==null) " " else cell.gameToken.color
 
         print("|" + stringVar)
       }
@@ -31,34 +35,28 @@ class Tui (var controller: GameController) extends Observer{
     }
     println()
   }
+  */
 
-  def processInputLine(): Unit = {
+  def processInputLine() {
 
     println("Sie spielen 4-Gewinnt!\n")
-
     println("Bitte Name für Spieler 1 angeben:")
     controller.addPlayer(1, readLine())
-
     println("Bitte Name für Spieler 2 angeben:")
     controller.addPlayer(2, readLine())
-
 
     // actualize field
     printField()
     var win = false
 
     while (!win) {
-
-      // Player 1
-      println(controller.getName + " ist an der Reihe, bitte Spalte wählen...")
+      println(controller.getActualPlayer.color + " ist an der Reihe, bitte Spalte wählen...")
       win = makeTurnAndCheck()
 
       // actualize field
       printField()
-
     }
-    println("Das Spiel ist Aus! "+controller.getName + " hat gewonnen.")
-
+    println("Das Spiel ist Aus! "+controller.getActualPlayer.color + " hat gewonnen.")
   }
 
   def makeTurnAndCheck():Boolean = {
@@ -79,6 +77,6 @@ class Tui (var controller: GameController) extends Observer{
         case e: Exception => println("Die Eingabe ist keine korrekte Spalte! Bitte Spalte wählen...")
       }
     }while (!isCorrect)
-    return controller.checkConnectFour(input.toInt-1)
+    return controller.conn4(input.toInt-1, controller.getActualPlayer)
   }
 }

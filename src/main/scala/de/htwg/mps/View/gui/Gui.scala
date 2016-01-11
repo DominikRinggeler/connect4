@@ -1,11 +1,11 @@
 package de.htwg.mps.View.gui
 
 import java.awt.{Color, Dimension}
-import javax.swing.Box
+import javax.swing.{JPanel, JFrame, Box}
 
 import de.htwg.mps.Connect4._
 import de.htwg.mps.Controller.GameController
-import de.htwg.mps.Model.GameField
+import de.htwg.mps.Model.GameStatus
 
 import scala.swing
 import scala.swing.event.{ButtonClicked, MouseClicked}
@@ -14,150 +14,134 @@ import scala.swing._
 /**
  * Created by dominikringgeler on 23.11.15.
  */
-object Gui extends SimpleSwingApplication {
-
-  var controller : GameController = null
-
-  def setController(controller: GameController){
-    this.controller = controller
-  }
-
-  var rows = GameField.rows
+class Gui(controller: GameController) extends SimpleSwingApplication {
+  val rows = controller.gridRows
   val dCol = new Dimension(50, rows*45)
   val dCell = new Dimension(40, 40)
+  var gameStatus = GameStatus.NOT_PLAYING
 
-  var gameStartet = false
-  var gameOver = false
-  var counter = 0
+  //var gameStartet = false
+  //var gameOver = false
 
-  // Header
+  /*
+   *    Init Header
+   */
+  val fieldplayer1 = newField
+  val fieldplayer2 = newField
+  val goButton = new Button{
+    text = "Spiel starten"
+  }
+  listenTo(goButton)
+
+  lazy val header = new FlowPanel(new Label("Spieler 1:"),fieldplayer1, new Label("  Spieler 2:"),fieldplayer2,goButton){
+    border = Swing.EmptyBorder(10,10,10,10)
+  }
   def newField = new TextField {
     text=""
     columns=5
     horizontalAlignment = Alignment.Right
   }
 
-  val fieldplayer1 = newField
-  val fieldplayer2 = newField
-
-  lazy val header = new FlowPanel(new Label("Spieler 1:"),fieldplayer1, new Label("  Spieler 2:"),fieldplayer2,goButton){
-    border = Swing.EmptyBorder(10,10,10,10)
-  }
-
-  val goButton = new Button{
-    text = "Spiel starten"
-
-  }
-  listenTo(goButton)
-
   reactions += {
     case ButtonClicked(goButton) =>
-      if(gameStartet){
-        resetGame()
-      }
-      initGame
-      if(gameStartet){
-        goButton.text="Neu starten"
-      }
+      resetGame
+      initPlayers
+      goButton.text="Neu starten"
   }
 
-  // GameField
+  /*
+   *  Init GameField
+   */
   lazy val gameFieldUi = new FlowPanel()
 
-  var cols = new Array[BoxPanel](GameField.columns)
+  var cols = new Array[BoxPanel](controller.gridColumns)
 
-  for(indexCol <- 0 until rows){
-    val col =  new BoxPanel(Orientation.Vertical) {
-      minimumSize = dCol
-      maximumSize = dCol
-      preferredSize = dCol
-      background = Color.black
-      listenTo(mouse.clicks)
+  def initField {
+    var counter = 0
+    gameFieldUi.contents.clear()
+    cols = new Array[BoxPanel](controller.gridColumns)
+    for (indexCol <- 0 until controller.gridColumns) {
+      var col = new BoxPanel(Orientation.Vertical) {
+        minimumSize = dCol
+        maximumSize = dCol
+        preferredSize = dCol
+        background = Color.black
+        listenTo(mouse.clicks)
 
-      for(indexRow <- 0 until rows) {
-        contents += new Panel {
-          background = Color.white
-          minimumSize = dCell
-          maximumSize = dCell
-          preferredSize = dCell
-          border = Swing.EmptyBorder(5, 5, 5, 5)
+        for (indexRow <- 0 until controller.gridRows) {
+          contents += new Panel {
+            background = Color.white
+            minimumSize = dCell
+            maximumSize = dCell
+            preferredSize = dCell
+            border = Swing.EmptyBorder(5, 5, 5, 5)
+          }
+          peer.add(Box.createVerticalStrut(5))
         }
-        peer.add(Box.createVerticalStrut(5))
-      }
 
-      reactions += {
-        case e: MouseClicked =>
+        reactions += {
+          case e: MouseClicked =>
+            if (gameStatus== GameStatus.PLAYING) {
+              var isCorrect = false
+              var win = false
 
-          if (gameStartet==true && gameOver == false){
-            var isCorrect = false
-            var win = false
-            var color = controller.getColor
+              // get the player to make his turn
+              val player = controller.getActualPlayer
 
-            isCorrect = controller.makeTurn(indexCol)
-            if (isCorrect) {
-              win = controller.checkConnectFour(indexCol)
+              // make the players turn and check if his turn is correct
+              isCorrect = controller.makeTurn(indexCol)
 
-              val rowIndexLastToken = GameField.getRowIndex(indexCol)-1
-              val numberOfContents = rows+rows-2
+              if (isCorrect) {
+                win = controller.conn4(indexCol, player)
 
-              if (color ==1)
-                this.contents(numberOfContents-rowIndexLastToken*2).background = Color.red
-              else if (color == 2)
-                this.contents(numberOfContents-rowIndexLastToken*2).background = Color.green
+                val rowIndexLastToken = controller.getRowIndex(indexCol) + 1
 
-              counter = counter+1
-              if(counter==(GameField.rows+1)*(GameField.columns+1)){
-                outputText.text = "Unentschieden!"
-              }else{
-                nextPlayer
+                this.contents((rows-(rows-rowIndexLastToken))*2).background = setColor(player.color)
+                counter = counter + 1
+                var co = controller.gridRows*controller.gridColumns
+                if (counter >= controller.gridRows*controller.gridColumns) {
+                  outputText.text = "Unentschieden!"
+                  gameStatus = GameStatus.DRAW
+                } else {
+                  nextPlayer
+                }
+              }
+              if (win) {
+                gameStatus=GameStatus.WIN
+                println("winning")
+                outputText.text = controller.getActualPlayer.name + " hat gewonnen!"
+                goButton.text = "Revanche!"
               }
             }
-            if (win) {
-              gameOver = true
-              println("winning")
-              outputText.text = controller.getName + " hat gewonnen!"
-              goButton.text="Revanche!"
-            }
-          }
+        }
       }
+      cols(indexCol) = col
+      gameFieldUi.contents += col
     }
-    cols(indexCol) = col
-    gameFieldUi.contents += col
   }
 
-  // Footer
-  val outputText = new Label {
-    text = "Bitte die Spielernamen eingeben und Spiel starten"
+  def setColor(c:Int):Color = c match {
+    case 1 => Color.red
+    case 2 => Color.green
   }
+
+  /*
+   *  Init Footer
+   */
+  val outputText = new Label{ text = "Bitte die Spielernamen eingeben und Spiel starten"}
   val footer = new FlowPanel(outputText)
+  footer.preferredSize = new swing.Dimension(100,50)
+  footer.background = Color.ORANGE
 
-
-  def top = new MainFrame {
-    title = "Hello to Connect 4!"
-    //resizable = false
-
-    contents = new BoxPanel(Orientation.Vertical) {
-      contents += header
-      contents += gameFieldUi
-      contents += footer
-    }
-
-    menuBar = new MenuBar {
-      contents += new Menu("Spiel")
-      {
-        contents += new MenuItem(newGameAction)
-        contents += new MenuItem(quitAction)
-      }
-    }
-  }
-
+  /*
+   *  Setup game
+   */
   val quitAction = Action("Beenden") {System.exit(0)}
   val newGameAction = Action("Neu starten") {
-    resetGame
-    initGame
+    newGame
   }
 
-  def initGame(): Unit ={
+  def initPlayers() {
     if (fieldplayer1.text == ""){
       Dialog.showMessage(fieldplayer1, "Bitte geheben Sie einen Name für Spieler 1 an", "Name von Spieler 1 fehlt", Dialog.Message.Error)
     }
@@ -168,31 +152,58 @@ object Gui extends SimpleSwingApplication {
       Dialog.showMessage(fieldplayer1, "Bitte geheben Sie unterschiedliche Namen an", "Namen sind identisch", Dialog.Message.Error)
     }
     else{
-      gameStartet = true
-      gameOver = false
-
+      gameStatus = GameStatus.PLAYING
       controller.addPlayer(1, fieldplayer1.text)
       controller.addPlayer(2, fieldplayer2.text)
 
-      outputText.text = controller.getName + " ist an der Reihe"
+      startGame
     }
   }
 
-  def resetGame(): Unit ={
+  def startGame = outputText.text = controller.getActualPlayer.name + " ist an der Reihe"
 
-    controller.removePlayers()
+  def newGame() {
+    controller.newGrid(4, 4)
+    controller.removePlayers
+    initPlayers
+    initField
+    box.repaint()
+  }
 
-    for (col <- cols){
-      for(cellIndex <- 0 until rows) {
-        val numberOfContents = rows+rows-2
-        col.contents(numberOfContents-cellIndex*2).background = Color.white
-        GameField.initializeField(GameField.rows,GameField.columns)
+  def resetGame() {
+    controller.reset
+    controller.removePlayers
+    initField
+  }
+
+  def nextPlayer {
+    outputText.text = controller.getActualPlayer.name + " ist an der Reihe!"
+  }
+
+  /*
+   *  Setup View
+   */
+  lazy val box = new BoxPanel(Orientation.Vertical) {
+    contents += header
+    contents += gameFieldUi
+    contents += footer
+  }
+
+  def top = new MainFrame {
+    title = "Hello to Connect 4!"
+    //resizable = false
+
+    initField
+
+    contents = box
+
+    menuBar = new MenuBar {
+      contents += new Menu("Spiel")
+      {
+        contents += new MenuItem(newGameAction)
+        contents += new MenuItem(quitAction)
       }
     }
-  }
-
-  def nextPlayer: Unit ={
-    outputText.text = controller.getName + " ist an der Reihe!"
   }
 }
 
