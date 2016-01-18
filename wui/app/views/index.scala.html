@@ -1,0 +1,32 @@
+@import helper._
+@(content: String)
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"></script>
+    </head>
+    <body>
+
+        @form(action = routes.Application.start()) {
+            <label for="s1">Spieler 1 :
+                <input id="s1" name="s1">
+            </label>
+            <br/>
+            <label for="s2">Spieler 2 :
+                <input id="s2" name="s2">
+            </label>
+            <br/>
+            <br/>
+
+
+            <input type="submit" id="start" value="Start">
+
+            <br/>
+        }
+
+    </body>
+</html>
