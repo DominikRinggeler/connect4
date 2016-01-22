@@ -8,3 +8,43 @@
 <de.htwg.mps.Model.CellSpec-stats timestamp="1452499239421"><stats time="44" expectations="4" failures="1" successes="3" examples="4"><trend><stats time="44" failures="1" successes="-1"></stats></trend></stats></de.htwg.mps.Model.CellSpec-stats>
 <de.htwg.mps.Model.CellSpec-stats timestamp="1452499281542"><stats time="39" expectations="4" successes="4" examples="4"><trend><stats time="39" failures="-1" successes="1"></stats></trend></stats></de.htwg.mps.Model.CellSpec-stats>
 <de.htwg.mps.Model.CellSpec-stats timestamp="1452499371984"><stats time="40" expectations="4" successes="4" examples="4"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453129914206"><stats time="38" expectations="4" successes="4" examples="4"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453129945619"><stats time="57" expectations="4" successes="4" examples="4"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453130721221"><stats time="29" expectations="4" successes="4" examples="4"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453130751623"><stats time="61" expectations="4" successes="4" examples="4"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453130783232"><stats time="92" expectations="4" successes="4" examples="4"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-results timestamp="1453130930214"><result location="de.htwg.mps.Model.CellSpec (CellSpec.scala:20)" id="-546953424"><stats time="74" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.CellSpec-results>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453130930260"><stats time="35" expectations="5" failures="1" successes="4" examples="5"><trend><stats time="35" expectations="1" failures="1" examples="1"></stats></trend></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-results timestamp="1453131552348"><result location="de.htwg.mps.Model.CellSpec (CellSpec.scala:20)" id="-546953424"><stats time="4" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.CellSpec-results>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453131552363"><stats time="5" expectations="5" failures="1" successes="4" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-results timestamp="1453131984595"><result location="de.htwg.mps.Model.CellSpec (CellSpec.scala:20)" id="-546953424"><stats time="4" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.CellSpec-results>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453131984609"><stats time="9" expectations="5" failures="1" successes="4" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453132109396"><stats time="3" expectations="5" successes="5" examples="5"><trend><stats time="3" failures="-1" successes="1"></stats></trend></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453132155599"><stats time="6" expectations="5" successes="5" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453132932799"><stats time="6" expectations="5" successes="5" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453132961337"><stats time="10" expectations="5" successes="5" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453133024076"><stats time="11" expectations="5" successes="5" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453133064115"><stats time="12" expectations="5" successes="5" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453133305428"><stats time="4" expectations="5" successes="5" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453133560167"><stats time="11" expectations="5" successes="5" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453308990457"><stats time="3" expectations="5" successes="5" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453309007723"><stats time="12" expectations="5" successes="5" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453309340628"><stats time="6" expectations="5" successes="5" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453309479045"><stats time="5" expectations="5" successes="5" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453309588629"><stats time="2" expectations="5" successes="5" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453309637448"><stats time="7" expectations="5" successes="5" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453309742029"><stats time="5" expectations="5" successes="5" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453309811313"><stats time="3" expectations="5" successes="5" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453309932023"><stats time="8" expectations="5" successes="5" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453309950554"><stats time="8" expectations="5" successes="5" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453310689896"><stats time="6" expectations="5" successes="5" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453310780434"><stats time="6" expectations="5" successes="5" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453310957925"><stats time="5" expectations="5" successes="5" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453311076264"><stats time="5" expectations="5" successes="5" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453311389449"><stats time="11" expectations="5" successes="5" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453311438248"><stats time="5" expectations="5" successes="5" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453311532433"><stats time="3" expectations="5" successes="5" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>
+<de.htwg.mps.Model.CellSpec-stats timestamp="1453311732236"><stats time="4" expectations="5" successes="5" examples="5"></stats></de.htwg.mps.Model.CellSpec-stats>

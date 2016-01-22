@@ -19,7 +19,6 @@ class GameTokenSpec extends Specification{
       val token = new GameToken(player)
       token.owner.color must be_==(1)
       token.owner.name must be_==("test")
-
     }
   }
 }

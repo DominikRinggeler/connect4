@@ -2,3 +2,37 @@
 </de.htwg.mps.Model.HumanPlayerSpec-results>
 <de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1452088266708"><stats time="39" expectations="4" failures="1" successes="3" examples="4"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
 <de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1452088299224"><stats time="36" expectations="4" successes="4" examples="4"><trend><stats time="36" failures="-1" successes="1"></stats></trend></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-results timestamp="1453129240457"><result location="de.htwg.mps.Model.HumanPlayerSpec (HumanPlayerSpec.scala:24)" id="715157444"><stats time="293" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.HumanPlayerSpec-results>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453129240743"><stats time="73" expectations="7" failures="1" successes="6" examples="7"><trend><stats time="73" expectations="3" failures="1" successes="2" examples="3"></stats></trend></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453129417269"><stats time="45" expectations="8" successes="8" examples="8"><trend><stats time="45" expectations="1" failures="-1" successes="2" examples="1"></stats></trend></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453130575362"><stats time="25" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453131067583"><stats time="62" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453131552596"><stats time="8" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453131984831"><stats time="8" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453132109623"><stats time="6" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453132156005"><stats time="31" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453132933050"><stats time="8" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453132961734"><stats time="12" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453133024429"><stats time="11" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453133064405"><stats time="14" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453133305646"><stats time="7" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453133560468"><stats time="9" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453308991307"><stats time="5" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453309008253"><stats time="17" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453309341230"><stats time="16" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453309479492"><stats time="28" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453309588889"><stats time="10" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453309637778"><stats time="13" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453309742310"><stats time="12" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453309811568"><stats time="7" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453309932255"><stats time="7" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453309950897"><stats time="17" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453310690180"><stats time="12" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453310780739"><stats time="15" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453310958239"><stats time="22" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453311076652"><stats time="16" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453311389940"><stats time="21" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453311438520"><stats time="10" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453311532668"><stats time="8" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>
+<de.htwg.mps.Model.HumanPlayerSpec-stats timestamp="1453311732475"><stats time="9" expectations="8" successes="8" examples="8"></stats></de.htwg.mps.Model.HumanPlayerSpec-stats>

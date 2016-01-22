@@ -57,9 +57,9 @@ class GameRuleController (val grid:Grid){
     var win = false
     for(index <- -3 until 4){
       val cell = grid.getCell((-1*index)+row, index+col)
-      val (c,w) = check(cell,currentColor,countToken)
-      countToken = c
-      if(w) win = w
+      val result = check(cell,currentColor,countToken)
+      countToken = result._1
+      if(result._2) win = result._2
     }
     win
   }
@@ -76,4 +76,9 @@ class GameRuleController (val grid:Grid){
     } else count = 0
     (count, win)
   }
+
 }
+
+
+
+  

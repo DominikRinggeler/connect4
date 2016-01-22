@@ -9,6 +9,27 @@ import org.specs2.runner.JUnitRunner
  */
 @RunWith(classOf[JUnitRunner])
 class HumanPlayerSpec extends Specification {
+  "A Human Player without name and color " should {
+    val player = new HumanPlayer(0, "")
+    val token = new GameToken(player);
+
+    "have color 1" in {
+      player.color must be_==(0)
+    }
+
+    "have name 'Test Name'" in {
+      player.name must be_==("")
+    }
+
+    "have token color 0" in {
+      player.token.color must be_==(0)
+    }
+
+    "return the owner" in {
+      player.token.owner must be_==(player)
+    }
+  }
+
   "A Human Player set name and color " should {
     val player = new HumanPlayer(1,"Test Name")
 

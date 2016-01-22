@@ -5,7 +5,7 @@ import javax.swing.{JPanel, JFrame, Box}
 
 import de.htwg.mps.Connect4._
 import de.htwg.mps.Controller.GameController
-import de.htwg.mps.Model.GameStatus
+import de.htwg.mps.Model.{HumanPlayer, GameStatus}
 
 import scala.swing
 import scala.swing.event.{ButtonClicked, MouseClicked}
@@ -19,6 +19,8 @@ class Gui(controller: GameController) extends SimpleSwingApplication {
   val dCol = new Dimension(50, rows*45)
   val dCell = new Dimension(40, 40)
   var gameStatus = GameStatus.NOT_PLAYING
+  var cols = new Array[BoxPanel](controller.gridColumns)
+
 
   //var gameStartet = false
   //var gameOver = false
@@ -53,8 +55,6 @@ class Gui(controller: GameController) extends SimpleSwingApplication {
    *  Init GameField
    */
   lazy val gameFieldUi = new FlowPanel()
-
-  var cols = new Array[BoxPanel](controller.gridColumns)
 
   def initField {
     var counter = 0
@@ -96,7 +96,9 @@ class Gui(controller: GameController) extends SimpleSwingApplication {
 
                 val rowIndexLastToken = controller.getRowIndex(indexCol) + 1
 
-                this.contents((rows-(rows-rowIndexLastToken))*2).background = setColor(player.color)
+                //this.contents((rows-(rows-rowIndexLastToken))*2).background = setColor(player.color)
+                printField
+
                 counter = counter + 1
                 var co = controller.gridRows*controller.gridColumns
                 if (counter >= controller.gridRows*controller.gridColumns) {
@@ -121,6 +123,7 @@ class Gui(controller: GameController) extends SimpleSwingApplication {
   }
 
   def setColor(c:Int):Color = c match {
+    case 0 => Color.white
     case 1 => Color.red
     case 2 => Color.green
   }
@@ -153,27 +156,40 @@ class Gui(controller: GameController) extends SimpleSwingApplication {
     }
     else{
       gameStatus = GameStatus.PLAYING
-      controller.addPlayer(1, fieldplayer1.text)
-      controller.addPlayer(2, fieldplayer2.text)
+      controller.addPlayer(new HumanPlayer(1, fieldplayer1.text))
+      controller.addPlayer(new HumanPlayer(2, fieldplayer2.text))
 
       startGame
     }
   }
 
-  def startGame = outputText.text = controller.getActualPlayer.name + " ist an der Reihe"
+  def startGame = {
+    outputText.text = controller.getActualPlayer.name + " ist an der Reihe"
+    printField
+  }
+
+  def printField = {
+    val grid = controller.grid
+    for (rowIndex <- (0 to controller.grid.rows-1)) {
+      for (columnIndex <- 0 until controller.grid.columns) {
+        val cell = controller.grid.getCell(rowIndex,columnIndex)
+        val color = if(cell!=null && cell.isSet) cell.gameToken.color else 0
+        cols.apply(columnIndex).contents(rowIndex*2).background = setColor(color)
+      }
+    }
+  }
 
   def newGame() {
-    controller.newGrid(4, 4)
+    controller.reset
     controller.removePlayers
-    initPlayers
-    initField
-    box.repaint()
+    printField
+
   }
 
   def resetGame() {
     controller.reset
     controller.removePlayers
-    initField
+    printField
   }
 
   def nextPlayer {

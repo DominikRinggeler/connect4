@@ -53,7 +53,7 @@ class GameRuleControllerSpec extends Specification{
 
     "have a checked return (4, true) " in {
       var grid = new Grid(6,7)
-      grid = grid.setCellWithRowCol(0, 0, token)
+      grid = grid.setCellWithRowCol(0, 0, token) getOrElse grid
       val controller = new GameRuleController(grid)
       val cell = grid.getCell(0, 0)
 
@@ -62,10 +62,10 @@ class GameRuleControllerSpec extends Specification{
 
     "have 4 in a column" in {
       var grid = new Grid(6,7)
-      grid = grid.setCellWithRowCol(2, 0, token)
-      grid = grid.setCellWithRowCol(3, 0, token)
-      grid = grid.setCellWithRowCol(4, 0, token)
-      grid = grid.setCellWithRowCol(5, 0, token)
+      grid = grid.setCellWithRowCol(2, 0, token) getOrElse grid
+      grid = grid.setCellWithRowCol(3, 0, token) getOrElse grid
+      grid = grid.setCellWithRowCol(4, 0, token) getOrElse grid
+      grid = grid.setCellWithRowCol(5, 0, token) getOrElse grid
 
       val controller = new GameRuleController(grid)
       controller.checkFourInColumn(2,0,1) must be_==(true)
@@ -73,10 +73,10 @@ class GameRuleControllerSpec extends Specification{
 
     "have 4 in a row" in {
       var grid = new Grid(6,7)
-      grid = grid.setCellWithRowCol(5, 1, token)
-      grid = grid.setCellWithRowCol(5, 2, token)
-      grid = grid.setCellWithRowCol(5, 3, token)
-      grid = grid.setCellWithRowCol(5, 4, token)
+      grid = grid.setCellWithRowCol(5, 1, token) getOrElse grid
+      grid = grid.setCellWithRowCol(5, 2, token) getOrElse grid
+      grid = grid.setCellWithRowCol(5, 3, token) getOrElse grid
+      grid = grid.setCellWithRowCol(5, 4, token) getOrElse grid
 
       val controller = new GameRuleController(grid)
       controller.checkFourInRow(5,4,1) must be_==(true)
@@ -84,10 +84,10 @@ class GameRuleControllerSpec extends Specification{
 
     "have 4 in a diagonal from left to right up" in {
       var grid = new Grid(6,7)
-      grid = grid.setCellWithRowCol(5, 1, token)
-      grid = grid.setCellWithRowCol(4, 2, token)
-      grid = grid.setCellWithRowCol(3, 3, token)
-      grid = grid.setCellWithRowCol(2, 4, token)
+      grid = grid.setCellWithRowCol(5, 1, token) getOrElse grid
+      grid = grid.setCellWithRowCol(4, 2, token) getOrElse grid
+      grid = grid.setCellWithRowCol(3, 3, token) getOrElse grid
+      grid = grid.setCellWithRowCol(2, 4, token) getOrElse grid
 
       val controller = new GameRuleController(grid)
       controller.checkFourDiagonalLeftRightUp(2,4,1) must be_==(true)
@@ -95,10 +95,10 @@ class GameRuleControllerSpec extends Specification{
 
     "have 4 in a diagonal from left to right down" in {
       var grid = new Grid(6,7)
-      grid = grid.setCellWithRowCol(1, 1, token)
-      grid = grid.setCellWithRowCol(2, 2, token)
-      grid = grid.setCellWithRowCol(3, 3, token)
-      grid = grid.setCellWithRowCol(4, 4, token)
+      grid = grid.setCellWithRowCol(1, 1, token) getOrElse grid
+      grid = grid.setCellWithRowCol(2, 2, token) getOrElse grid
+      grid = grid.setCellWithRowCol(3, 3, token) getOrElse grid
+      grid = grid.setCellWithRowCol(4, 4, token) getOrElse grid
 
       val controller = new GameRuleController(grid)
       controller.checkFourDiagonalLeftRightDown(1,1,1) must be_==(true)

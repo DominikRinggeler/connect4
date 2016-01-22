@@ -13,16 +13,7 @@ class GridSpec extends Specification {
   "A new Grid with 1 empty Cell" should {
     val player = new HumanPlayer(1, "p1")
     val token = new GameToken(player)
-    val grid = new Grid(1, 1)
-
-
-    /*
-    "have no game token" {
-      val grid = new Grid(1, 1)
-      val cell = grid.getCell(0, 0)
-      cell.gameToken must be_==(null)
-    }
-    */
+    var grid = new Grid(1, 1)
 
     "have no game token" in {
       grid.rows must be_==(1)
@@ -37,26 +28,18 @@ class GridSpec extends Specification {
     }
 
     "have set" in {
-      //var cells:Vector[Cell] = Vector.fill(1*1)(new Cell(token))
-      grid.setCell(0,token).getCell(0,0).gameToken must be_==(token)
+      grid = grid.setCell(0,token) getOrElse grid
+      grid.getCell(0,0).gameToken must be_==(token)
     }
 
-    "have row index 1" in {
+    "have not set" in {
+      val tGrid = grid.setCell(2,token) getOrElse null
+      tGrid must be_==(null)
+    }
+
+    "have row index 0" in {
       grid.getRowIndex(0) must be_==(0)
     }
-
-    "have 1 cell" in {
-      grid.getCells.size must be_==(1)
-    }
-
-    /*
-    "generate a String of the form\n" +
-      " 1 \n" +
-      "| |\n" in {
-      var grid = new Grid(1, 1)
-      grid.printField must be_==("\n\n 1 \n| |\n\n\n")
-    }
-    */
   }
 
   "A new Grid with 6x7 Cells" should {
@@ -70,22 +53,22 @@ class GridSpec extends Specification {
 
     "have set one value in the field (6,2)" in {
       var grid = new Grid(6,7)
-      grid = grid.setCell(1,token)
+      grid = grid.setCell(1,token) getOrElse grid
       grid.getCell(5,1).isSet must be_==(true)
     }
 
     "have set one value in the field (5,2)" in {
       var grid = new Grid(6,7)
-      grid = grid.setCell(1,token)
-      grid = grid.setCell(1,token)
+      grid = grid.setCell(1,token) getOrElse grid
+      grid = grid.setCell(1,token) getOrElse grid
       grid.getCell(4,1).isSet must be_==(true)
     }
 
     "have set second set value in the field (0,2)" in {
       var grid = new Grid(3,3)
       grid = grid.reset
-      grid = grid.setCell(1,token)
-      grid = grid.setCell(1,token)
+      grid = grid.setCell(1,token) getOrElse grid
+      grid = grid.setCell(1,token) getOrElse grid
       grid.getCell(1,1).isSet must be_==(true)
     }
 

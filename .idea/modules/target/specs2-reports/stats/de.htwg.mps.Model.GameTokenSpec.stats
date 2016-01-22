@@ -3,3 +3,38 @@
 <de.htwg.mps.Model.GameTokenSpec-stats timestamp="1452088786036"><stats time="39" expectations="1" failures="1" examples="1"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
 <de.htwg.mps.Model.GameTokenSpec-stats timestamp="1452088806373"><stats time="41" expectations="1" successes="1" examples="1"><trend><stats time="41" failures="-1" successes="1"></stats></trend></stats></de.htwg.mps.Model.GameTokenSpec-stats>
 <de.htwg.mps.Model.GameTokenSpec-stats timestamp="1452088866834"><stats time="38" expectations="2" successes="2" examples="2"><trend><stats time="38" expectations="1" successes="1" examples="1"></stats></trend></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453129829134"><stats time="32" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453130275700"><stats time="39" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453130356583"><stats time="32" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453130368040"><stats time="32" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453130470335"><stats time="48" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453130491881"><stats time="55" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453130986234"><stats time="49" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453131552470"><stats time="1" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453131984718"><stats time="1" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453132109520"><stats time="1" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453132155799"><stats time="7" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453132932941"><stats time="1" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453132961533"><stats time="3" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453133024244"><stats time="3" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453133064261"><stats expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453133305545"><stats time="2" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453133560329"><stats time="3" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453308990809"><stats time="2" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453309007968"><stats time="9" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453309340993"><stats time="2" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453309479238"><stats time="2" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453309588770"><stats time="2" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453309637610"><stats time="2" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453309742171"><stats time="2" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453309811455"><stats time="2" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453309932143"><stats time="1" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453309950721"><stats time="18" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453310690034"><stats time="3" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453310780591"><stats time="2" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453310958080"><stats time="1" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453311076426"><stats time="5" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453311389631"><stats time="3" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453311438378"><stats time="5" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453311532553"><stats time="1" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>
+<de.htwg.mps.Model.GameTokenSpec-stats timestamp="1453311732356"><stats time="2" expectations="2" successes="2" examples="2"></stats></de.htwg.mps.Model.GameTokenSpec-stats>

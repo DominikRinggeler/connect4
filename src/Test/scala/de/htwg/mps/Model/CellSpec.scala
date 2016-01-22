@@ -9,24 +9,26 @@ import org.specs2.runner.JUnitRunner
  */
 @RunWith(classOf[JUnitRunner])
 class CellSpec extends Specification {
-  "An empty cell" should {
-    "have gameToken null" in {
-      new Cell(null).gameToken must be_==(null)
+  "A cell with set token" should {
+    val token = new GameToken(new HumanPlayer(1,"test"))
+    val cell = new Cell(token)
+    "be set" in {
+      cell.isSet must beTrue
     }
+    "have a game token with color 1 and name 'test'" in {
+      new Cell(token).gameToken must be_==(token)
+    }
+  }
+  "An empty cell" should {
     "be not set" in {
       val cell = new Cell(null)
       cell.isSet must beFalse
     }
-  }
-
-  "A set cell" should {
-    val token = new GameToken(new HumanPlayer(1,"test"))
-    "have a game token with color 1 and name 'test'" in {
-      new Cell(token).gameToken must be_==(token)
+    "have gameToken null" in {
+      new Cell(null).gameToken must be_==(null)
     }
-    "be set" in {
-      val cell = new Cell(token)
-      cell.isSet must beTrue
+    "be empty" in {
+      Cell.empty.isSet must beFalse
     }
   }
 }
