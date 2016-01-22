@@ -4,7 +4,6 @@ package de.htwg.mps.Model
  * Created by dominikringgeler on 06.01.16.
  */
 class GameRuleController (val grid:Grid){
-
   // check winning situation
   def checkConnectFour(column: Int, humanPlayer: HumanPlayer): Boolean = {
     val rowIndexLastToken = if(0<=grid.getRowIndex(column)) grid.getRowIndex(column)+1 else 0
@@ -56,10 +55,21 @@ class GameRuleController (val grid:Grid){
     var countToken = 0
     var win = false
     for(index <- -3 until 4){
-      val cell = grid.getCell((-1*index)+row, index+col)
-      val result = check(cell,currentColor,countToken)
-      countToken = result._1
-      if(result._2) win = result._2
+      if(!win){
+        val tmpRow = (-1*index)+row
+        val tempCol = index+col
+
+        if(tmpRow>=0 && tempCol>=0) {
+          val cell = grid.getCell(tmpRow, tempCol)
+          var result = check(cell, currentColor, countToken)
+          countToken = result._1
+          if (result._2) win = result._2
+        }
+        else {
+            countToken = 0
+            win= false
+        }
+      }
     }
     win
   }
@@ -76,9 +86,4 @@ class GameRuleController (val grid:Grid){
     } else count = 0
     (count, win)
   }
-
 }
-
-
-
-  

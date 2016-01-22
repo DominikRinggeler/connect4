@@ -152,3 +152,28 @@
 <de.htwg.mps.Model.GridSpec-stats timestamp="1453311438485"><stats time="16" expectations="11" successes="11" examples="11"></stats></de.htwg.mps.Model.GridSpec-stats>
 <de.htwg.mps.Model.GridSpec-stats timestamp="1453311532628"><stats time="9" expectations="11" successes="11" examples="11"></stats></de.htwg.mps.Model.GridSpec-stats>
 <de.htwg.mps.Model.GridSpec-stats timestamp="1453311732438"><stats time="18" expectations="11" successes="11" examples="11"></stats></de.htwg.mps.Model.GridSpec-stats>
+<de.htwg.mps.Model.GridSpec-stats timestamp="1453468833087"><stats time="10" expectations="11" successes="11" examples="11"></stats></de.htwg.mps.Model.GridSpec-stats>
+<de.htwg.mps.Model.GridSpec-stats timestamp="1453468895786"><stats time="13" expectations="11" successes="11" examples="11"></stats></de.htwg.mps.Model.GridSpec-stats>
+<de.htwg.mps.Model.GridSpec-stats timestamp="1453468942367"><stats time="12" expectations="11" successes="11" examples="11"></stats></de.htwg.mps.Model.GridSpec-stats>
+<de.htwg.mps.Model.GridSpec-stats timestamp="1453468954269"><stats time="21" expectations="11" successes="11" examples="11"></stats></de.htwg.mps.Model.GridSpec-stats>
+<de.htwg.mps.Model.GridSpec-stats timestamp="1453469359582"><stats time="17" expectations="11" successes="11" examples="11"></stats></de.htwg.mps.Model.GridSpec-stats>
+<de.htwg.mps.Model.GridSpec-stats timestamp="1453470008309"><stats time="46" expectations="9" successes="9" examples="9"><trend><stats time="46" expectations="-2" successes="-2" examples="-2"></stats></trend></stats></de.htwg.mps.Model.GridSpec-stats>
+<de.htwg.mps.Model.GridSpec-results timestamp="1453470118428"><result location="de.htwg.mps.Model.GridSpec (GridSpec.scala:50)" id="2087773436"><stats time="74" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GridSpec-results>
+<de.htwg.mps.Model.GridSpec-stats timestamp="1453470118591"><stats time="82" expectations="10" failures="1" successes="9" examples="10"><trend><stats time="82" expectations="1" failures="1" examples="1"></stats></trend></stats></de.htwg.mps.Model.GridSpec-stats>
+<de.htwg.mps.Model.GridSpec-results timestamp="1453470126324"><result location="de.htwg.mps.Model.GridSpec (GridSpec.scala:50)" id="2087773436"><stats time="17" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GridSpec-results>
+<de.htwg.mps.Model.GridSpec-stats timestamp="1453470126422"><stats time="49" expectations="10" failures="1" successes="9" examples="10"></stats></de.htwg.mps.Model.GridSpec-stats>
+<de.htwg.mps.Model.GridSpec-stats timestamp="1453470202132"><stats time="55" expectations="10" successes="10" examples="10"><trend><stats time="55" failures="-1" successes="1"></stats></trend></stats></de.htwg.mps.Model.GridSpec-stats>
+<de.htwg.mps.Model.GridSpec-results timestamp="1453470296597"><result location="de.htwg.mps.Model.GridSpec (GridSpec.scala:70)" id="92566191"><stats time="6" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GridSpec-results>
+<de.htwg.mps.Model.GridSpec-stats timestamp="1453470296668"><stats time="32" expectations="11" failures="1" successes="10" examples="11"><trend><stats time="32" expectations="1" failures="1" examples="1"></stats></trend></stats></de.htwg.mps.Model.GridSpec-stats>
+<de.htwg.mps.Model.GridSpec-stats timestamp="1453470348085"><stats time="49" expectations="11" successes="11" examples="11"><trend><stats time="49" failures="-1" successes="1"></stats></trend></stats></de.htwg.mps.Model.GridSpec-stats>
+<de.htwg.mps.Model.GridSpec-stats timestamp="1453470359934"><stats time="45" expectations="11" successes="11" examples="11"></stats></de.htwg.mps.Model.GridSpec-stats>
+<de.htwg.mps.Model.GridSpec-stats timestamp="1453470502601"><stats time="75" expectations="12" successes="12" examples="12"><trend><stats time="75" expectations="1" successes="1" examples="1"></stats></trend></stats></de.htwg.mps.Model.GridSpec-stats>
+<de.htwg.mps.Model.GridSpec-stats timestamp="1453470513826"><stats time="59" expectations="12" successes="12" examples="12"></stats></de.htwg.mps.Model.GridSpec-stats>
+<de.htwg.mps.Model.GridSpec-stats timestamp="1453470576056"><stats time="43" expectations="12" successes="12" examples="12"></stats></de.htwg.mps.Model.GridSpec-stats>
+<de.htwg.mps.Model.GridSpec-stats timestamp="1453471025718"><stats time="3" expectations="12" successes="12" examples="12"></stats></de.htwg.mps.Model.GridSpec-stats>
+<de.htwg.mps.Model.GridSpec-stats timestamp="1453471230791"><stats time="3" expectations="12" successes="12" examples="12"></stats></de.htwg.mps.Model.GridSpec-stats>
+<de.htwg.mps.Model.GridSpec-stats timestamp="1453471401639"><stats time="10" expectations="12" successes="12" examples="12"></stats></de.htwg.mps.Model.GridSpec-stats>
+<de.htwg.mps.Model.GridSpec-stats timestamp="1453471429598"><stats time="4" expectations="12" successes="12" examples="12"></stats></de.htwg.mps.Model.GridSpec-stats>
