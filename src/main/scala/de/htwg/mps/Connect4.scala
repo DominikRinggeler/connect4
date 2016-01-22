@@ -9,23 +9,13 @@ object Connect4 {
 
   def main(args: Array[String]) = {
 
-    var grid = new Grid(1, 1)
+    val grid = new Grid(6,7)
+    val controller = new GameController(grid)
 
-    var g = grid.getRowIndex(0)
+    val ui = new Gui(controller)
+    ui.main(args)
 
-    //val gui = true
-    val gui = false
-    val controller = new GameController(new Grid(6, 7))
-
-    if (gui) {
-      val ui = new Gui(controller)
-      ui.main(args)
-    }
-    else {
-      val ui = new Gui(controller)
-      ui.main(args)
-      val tui = new Tui(controller)
-      tui.processInputLine()
-    }
+    val tui = new Tui(controller)
+    tui.processInputLine()
   }
 }

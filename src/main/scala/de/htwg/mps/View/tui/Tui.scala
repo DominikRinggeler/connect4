@@ -44,9 +44,7 @@ class Tui (var controller: GameController){
     case _  => println("Keine Zahl! Bitte nochmals wählen..."); 0
   }
 
-  def outputInitField(): Unit ={
-    println("Sie spielen 4-Gewinnt!\n")
-
+  def setupFieldSize {
     println("Bitte wählen Sie die Spielfeldgröße: ")
 
     var rows=0
@@ -64,6 +62,13 @@ class Tui (var controller: GameController){
     } while (cols==0)
 
     controller.newGrid(rows, cols)
+
+  }
+
+  def outputInitField(): Unit ={
+    println("Sie spielen 4-Gewinnt!\n")
+
+    //setupFieldSize
 
     println("Bitte Name für Spieler 1 angeben:")
     controller.addPlayer(new HumanPlayer(1, readLine()))
