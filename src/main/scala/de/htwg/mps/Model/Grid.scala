@@ -31,8 +31,9 @@ class Grid(val cells: Vector[Cell], val rows:Int) {
   def getRowIndex(column: Int): Int = {
     var rowIndex:Int = rows-1
 
-    while (getCell(rowIndex, column).isSet && 0<rowIndex)
+    while (getCell(rowIndex, column).isSet)
       rowIndex = rowIndex-1
+
     rowIndex
   }
 

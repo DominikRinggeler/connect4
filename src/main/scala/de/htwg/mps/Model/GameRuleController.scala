@@ -15,6 +15,7 @@ class GameRuleController (val grid:Grid){
     win
   }
 
+  // check    --XXXX---
   def checkFourInColumn(row:Int, col:Int, currentColor:Int): Boolean ={
     var countToken = 0
     var win = false
@@ -28,6 +29,13 @@ class GameRuleController (val grid:Grid){
     }
     win
   }
+
+  // check      -
+  //            X
+  //            X
+  //            X
+  //            X
+  //            -
   def checkFourInRow(row:Int, col:Int, currentColor:Int): Boolean ={
     var countToken = 0
     var win = false
@@ -39,6 +47,13 @@ class GameRuleController (val grid:Grid){
     }
     win
   }
+
+  // check
+  //
+  //          X
+  //            X
+  //              X
+  //                X
   def checkFourDiagonalLeftRightDown(row:Int, col:Int, currentColor:Int): Boolean ={
     var countToken = 0
     var win = false
@@ -51,6 +66,13 @@ class GameRuleController (val grid:Grid){
     }
     win
   }
+
+  // check
+  //
+  //                X
+  //              X
+  //            X
+  //          X
   def checkFourDiagonalLeftRightUp(row:Int, col:Int, currentColor:Int): Boolean ={
     var countToken = 0
     var win = false

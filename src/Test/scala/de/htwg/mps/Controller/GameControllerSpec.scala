@@ -62,11 +62,6 @@ class GameControllerSpec extends Specification{
       controller.gridColumns must be_==(8)
     }
 
-    "have row index: 0" in {
-      val controller = new GameController(grid)
-      controller.getRowIndex(0) must be_==(7)
-    }
-
     "have no connect 4" in {
       val controller = new GameController(grid)
       controller.addPlayer(new HumanPlayer(1,"player1"))

@@ -21,8 +21,6 @@ object Connect4 {
 
   def main(args: Array[String]) {
     ui.main(args)
-
-    println(controller.getActualPlayer.color + " ist an der Reihe, bitte Spalte wählen...")
-    while (tui.processInputLine(readLine())) {}
+    tui.startGame()
   }
 }

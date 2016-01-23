@@ -6,6 +6,7 @@ import de.htwg.mps.Model.{GameStatus, HumanPlayer, GameRuleController, Grid}
 
 import scala.swing.Publisher
 import scala.swing.event.Event
+import scala.util.{Try, Success, Failure}
 
 case class ChangeField() extends Event
 case class MakeTurn() extends Event
@@ -47,7 +48,6 @@ class GameController(var grid:Grid) extends Publisher {
     reset
   }
 
-
   def getActualPlayer: HumanPlayer = nextPlayers.head
   def getNextPlayers: List[HumanPlayer] = {
     nextPlayers = nextPlayers.tail
@@ -67,14 +67,22 @@ class GameController(var grid:Grid) extends Publisher {
 
   def gridColumns = grid.getColumns
 
-  def getRowIndex(index:Int) = grid.getRowIndex(index)
-
   // game control
-  def makeTurn(col: Int) = {
-      val actualPlayer = getActualPlayer
-      grid = grid.setCell(col, actualPlayer.token) getOrElse grid
-      if(conn4(col, actualPlayer)) gameStatus = GameStatus.WIN
-      publish(new ChangeField)
+  def makeTurn(col: Int) : Boolean = {
+
+    var correct = false
+    val actualPlayer = getActualPlayer
+    grid.setCell(col, actualPlayer.token) match {
+      case Failure(exception) => {
+        false
+      }
+      case Success(value) => {
+        grid = value
+        if(conn4(col, actualPlayer)) gameStatus = GameStatus.WIN
+        publish(new ChangeField)
+        true
+      }
+    }
   }
 
   def conn4(c:Int, player: HumanPlayer): Boolean ={

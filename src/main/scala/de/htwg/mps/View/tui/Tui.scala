@@ -1,10 +1,13 @@
 package de.htwg.mps.View.tui
 
 import java.util.{InputMismatchException, Observable, Observer}
+import akka.actor.Actor
 import de.htwg.mps.Controller.{ChangeField, StartGame, MakeTurn, GameController}
 import de.htwg.mps.Model.{GameStatus, HumanPlayer}
 
+import scala.io.StdIn._
 import scala.swing.Reactor
+import scala.util.{Success, Failure, Try}
 
 /**
  * Created by dominikringgeler on 25.10.15.
@@ -13,9 +16,23 @@ class Tui (var controller: GameController) extends Reactor{
   listenTo(controller)
 
   reactions += {
-    case e: ChangeField => outputPrintField()
+    case e: ChangeField => printGameField()
   }
 
+  // to check if its the first turn in the match
+  var first = true
+
+  // starts the processInputLine in a loop
+  def startGame(): Unit ={
+    if(first){
+      printGameField()
+      first = false
+    }
+    while(processInputLine(readLine())){}
+    System.exit(0);
+  }
+
+  // reacts on the input of command line
   def processInputLine(input: String) = {
     var continue = true
     input match {
@@ -24,26 +41,35 @@ class Tui (var controller: GameController) extends Reactor{
       case "p2" => controller.set2Player()
       case "p3" => controller.set3Player()
       case _ => {
-        input.toList.filter(c => c != ' ').map(c => c.toString.toInt) match {
-          case i :: Nil => i match {
-            case i if (i > 0 && i <= 9) => makeTurnAndCheck(i)
-            case i if (i > 9 || i <= 0) => print("Nicht gültig")
-          }
-          case _ =>
+        if(controller.gameStatus==GameStatus.PLAYING){
+          var input1 = Try(input.toInt)
+          input1 match {
+            case Failure(exception) => {
+              print("Nicht gültig, nochmal setzen...")
+            }
+            case Success(i) => i match {
+                case i:Int if (i > 0 && i <= controller.gridColumns) => printAfterTurn(i)
+                case i:Int if (i > controller.gridColumns || i <= 0) => print("Nicht gültig, nochmal setzen...")
+              }
+            }
+        } else {
+          printGameOver()
         }
       }
     }
     continue
   }
 
-  def gameOver(): Unit ={
+  // print the game over output
+  def printGameOver(): Unit ={
     controller.gameStatus match {
-      case GameStatus.WIN => println("Das Spiel ist Aus! " + controller.getActualPlayer.color + " hat gewonnen.  n - Neues Spiel, e - Beenden")
+      case GameStatus.WIN => println("Das Spiel ist Aus! " + controller.getActualPlayer.name + " hat gewonnen.  n - Neues Spiel, e - Beenden")
       case GameStatus.DRAW => println("Das Spiel ist Aus! Unentschieden. n - Neues Spiel, e - Beenden")
     }
   }
 
-  def outputPrintField() {
+  // prints the field
+  def printGameField() {
     println()
     for (i <- 0 until controller.grid.getColumns)
       print(" " + (i+1).toString)
@@ -63,25 +89,26 @@ class Tui (var controller: GameController) extends Reactor{
     println()
 
     if(controller.gameStatus!=GameStatus.PLAYING) {
-      gameOver()
+      printGameOver()
     } else {
-      println(controller.getActualPlayer.color + " ist an der Reihe, bitte Spalte wählen...")
+      println(controller.getActualPlayer.name + " ist an der Reihe, bitte Spalte wählen...")
     }
   }
 
-  def makeTurnAndCheck(input:Int) {
+  // prints the output of a turn of a player
+  def printAfterTurn(input:Int) {
     var isCorrect = false
-    do {
-      try {
-        val col = input - 1
-        if (col >= 0 && col < controller.gridColumns) {
-          controller.makeTurn(col)
-          isCorrect = true
-        }
-      } catch {
-        case e: Exception => println("Die Eingabe ist keine korrekte Spalte! Bitte Spalte wählen...")
+    try {
+      val col = input - 1
+      if (col >= 0 && col < controller.gridColumns) {
+        isCorrect = controller.makeTurn(col)
+        if (!isCorrect) println("Die Eingabe ist keine korrekte Spalte! Bitte Spalte wählen...")
       }
-    } while (!isCorrect)
+    } catch {
+      case e: Exception => {
+        printGameField
+        println("Die Eingabe ist keine korrekte Spalte! Bitte Spalte wählen...")
+      }
+    }
   }
-
 }

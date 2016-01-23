@@ -4,7 +4,7 @@ import java.awt.{Color, Dimension}
 import javax.swing.{JPanel, JFrame, Box}
 
 import de.htwg.mps.Connect4._
-import de.htwg.mps.Controller.{ChangeField, StartGame, MakeTurn, GameController}
+import de.htwg.mps.Controller.{ChangeField, GameController}
 import de.htwg.mps.Model.{HumanPlayer, GameStatus}
 
 import scala.swing
@@ -28,7 +28,7 @@ class Gui(controller: GameController) extends SimpleSwingApplication {
   /*
    *  Init GameField
    */
-  lazy val gameFieldUi = new FlowPanel()
+  val gameFieldUi = new FlowPanel()
 
   def initField {
     var counter = 0
@@ -59,8 +59,11 @@ class Gui(controller: GameController) extends SimpleSwingApplication {
               var isCorrect = false
 
               // make the players turn and check if his turn is correct
-              controller.makeTurn(indexCol)
-
+              var checker = true
+              checker = controller.makeTurn(indexCol)
+              if(!checker){
+                outputText.text = "Bitte nchmal..."
+              }
               setToken
             }
         }
