@@ -5,11 +5,12 @@ import javax.swing.{JPanel, JFrame, Box}
 
 import de.htwg.mps.Connect4._
 import de.htwg.mps.Controller.{ChangeField, GameController}
-import de.htwg.mps.Model.{HumanPlayer, GameStatus}
+import de.htwg.mps.Model.{Cell, HumanPlayer, GameStatus}
 
 import scala.swing
 import scala.swing.event.{ButtonClicked, MouseClicked}
 import scala.swing._
+import scala.util.{Success, Failure}
 
 /**
  * Created by dominikringgeler on 23.11.15.
@@ -93,7 +94,7 @@ class Gui(controller: GameController) extends SimpleSwingApplication {
     val grid = controller.grid
     for (rowIndex <- (0 to controller.grid.rows-1)) {
       for (columnIndex <- 0 until controller.grid.getColumns) {
-        val cell = controller.grid.getCell(rowIndex,columnIndex)
+        var cell = controller.grid.getCell(rowIndex,columnIndex)
         val color = if(cell!=null && cell.isSet) cell.gameToken.color else 0
         cols.apply(columnIndex).contents(rowIndex*2).background = setColor(color)
       }

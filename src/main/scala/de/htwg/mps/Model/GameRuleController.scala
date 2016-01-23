@@ -55,6 +55,8 @@ class GameRuleController (val grid:Grid){
   //              X
   //                X
   def checkFourDiagonalLeftRightDown(row:Int, col:Int, currentColor:Int): Boolean ={
+
+
     var countToken = 0
     var win = false
 

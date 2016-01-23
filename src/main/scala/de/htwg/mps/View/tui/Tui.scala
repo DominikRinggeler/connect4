@@ -77,8 +77,7 @@ class Tui (var controller: GameController) extends Reactor{
     println()
     for (rowIndex <- (0 to controller.grid.rows-1)) {
       for (columnIndex <- 0 until controller.grid.getColumns) {
-
-        val cell = controller.grid.getCell(rowIndex,columnIndex)
+        var cell = controller.grid.getCell(rowIndex,columnIndex)
         val stringVar = if(cell!=null && cell.isSet) cell.gameToken.color else " "
 
         print("|" + stringVar)
