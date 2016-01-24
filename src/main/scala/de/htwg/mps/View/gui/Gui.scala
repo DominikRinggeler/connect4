@@ -106,12 +106,13 @@ class Gui(controller: GameController) extends SimpleSwingApplication {
   }
 
   def setToken() {
-      printField
-      controller.gameStatus match {
-        case GameStatus.WIN => outputText.text = controller.getActualPlayer.name + " hat gewonnen!"
-        case GameStatus.DRAW => outputText.text = "Unentschieden!"
-        case GameStatus.PLAYING => nextPlayersTurn
-      }
+    printField
+    controller.gameStatus match {
+      case GameStatus.WIN => outputText.text = controller.getActualPlayer.name + " hat gewonnen!"
+      case GameStatus.DRAW => outputText.text = "Unentschieden!"
+      case GameStatus.PLAYING => nextPlayersTurn
+    }
+    gameFieldUi.repaint()
   }
 
   /*

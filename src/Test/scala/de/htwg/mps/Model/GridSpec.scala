@@ -38,7 +38,7 @@ class GridSpec extends Specification {
     }
 
     "have row index 0" in {
-      grid.getRowIndex(0) must be_==(0)
+      grid.getRowIndex(0) must be_==(-1)
     }
   }
 
