@@ -19,7 +19,7 @@ class GameRuleControllerSpec extends Specification{
       val controller = new GameRuleController(grid)
       val cell = grid.getCell(0, 0)
 
-      controller.check(cell,0,0) must be_==((0,false))
+      controller.check(0,0,0,1) must be_==((0,false))
     }
 
     "have not 4 in a column" in {
@@ -56,8 +56,7 @@ class GameRuleControllerSpec extends Specification{
       grid = grid.setCellWithRowCol(0, 0, token) getOrElse grid
       val controller = new GameRuleController(grid)
       val cell = grid.getCell(0, 0)
-
-      controller.check(cell,1,3) must be_==((4, true))
+      controller.check(0,0,3,1) must be_==((4, true))
     }
 
     "have 4 in a column" in {

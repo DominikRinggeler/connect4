@@ -21,10 +21,12 @@ class GameRuleController (val grid:Grid){
     var win = false
     if(row <= (grid.rows-4)) {
       for (rowIndex <- 0 until 4) {
-        val cell = grid.getCell(rowIndex + row, col)
-        val (c,w) = check(cell,currentColor,countToken)
-        countToken = c
-        if(w) win = w
+        val tempRow = rowIndex + row
+        if (!win) {
+          val result = check(col, tempRow, countToken, currentColor)
+          win = result._2
+          countToken = result._1
+        }
       }
     }
     win
@@ -42,15 +44,9 @@ class GameRuleController (val grid:Grid){
     for(colIndex <- -3 until 4){
       val tempCol = col+colIndex
       if (!win) {
-        if(tempCol>=0) {
-          val cell = grid.getCell(row, tempCol)
-          val (c,w) = check(cell,currentColor,countToken)
-          countToken = c
-          if(w) win = w
-        } else {
-          countToken = 0
-          win= false
-        }
+        val result = check(tempCol, row, countToken, currentColor)
+        win = result._2
+        countToken = result._1
       }
     }
     win
@@ -63,7 +59,6 @@ class GameRuleController (val grid:Grid){
   //              X
   //                X
   def checkFourDiagonalLeftRightDown(row:Int, col:Int, currentColor:Int): Boolean ={
-
     var countToken = 0
     var win = false
 
@@ -71,14 +66,10 @@ class GameRuleController (val grid:Grid){
       if (!win) {
         val tmpRow = index + row
         val tempCol = index + col
-        if(tmpRow>=0 && tempCol>=0) {
-          val cell = grid.getCell(tmpRow, tempCol)
-          val (c, w) = check(cell, currentColor, countToken)
-          countToken = c
-          if (w) win = w
-        } else {
-          countToken = 0
-          win= false
+        if (!win) {
+          val result = check(tempCol, tmpRow, countToken, currentColor)
+          win = result._2
+          countToken = result._1
         }
       }
     }
@@ -98,32 +89,34 @@ class GameRuleController (val grid:Grid){
       if(!win){
         val tmpRow = (-1*index)+row
         val tempCol = index+col
-
-        if(tmpRow>=0 && tempCol>=0) {
-          val cell = grid.getCell(tmpRow, tempCol)
-          var result = check(cell, currentColor, countToken)
+        if (!win) {
+          val result = check(tempCol, tmpRow, countToken, currentColor)
+          win = result._2
           countToken = result._1
-          if (result._2) win = result._2
-        }
-        else {
-            countToken = 0
-            win= false
         }
       }
     }
     win
   }
-
-  def check(cell:Cell, currentColor:Int, _count:Int) = {
-    var count = _count
-    var win=false
-    if(cell!=null && cell.isSet){
-      if (currentColor == cell.gameToken.color) {
-        count = count + 1
-        if (count >= 4)
-          win = true
-      } else count = 0
-    } else count = 0
+  
+  def check(col:Int, row:Int, countToken:Int, currentColor:Int) = {
+    var win = false
+    var reset = true
+    var count = countToken
+    if(inField(col:Int, row:Int)) {
+      val cell = grid.getCell(row, col)
+        if(cell!=null && cell.isSet){
+          if (currentColor == cell.gameToken.color) {
+            reset = false
+            count = count + 1
+          if (count >= 4)
+            win = true
+        }
+      }
+    }
+    if(reset) count = 0
     (count, win)
   }
+
+  def inField(col:Int, row:Int) = if(col>=0 && col<grid.getColumns && row>=0 && row<grid.rows) true else false
 }

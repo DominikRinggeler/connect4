@@ -144,3 +144,11 @@
 <de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1453471254133"><stats time="45" expectations="10" successes="10" examples="10"></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
 <de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1453471401522"><stats time="12" expectations="10" successes="10" examples="10"></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
 <de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1453471429485"><stats time="5" expectations="10" successes="10" examples="10"></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1453565420818"><stats time="4" expectations="10" successes="10" examples="10"></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1453565465620"><stats time="5" expectations="10" successes="10" examples="10"></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1453565494196"><stats time="63" expectations="10" successes="10" examples="10"></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1453624401225"><stats time="5" expectations="10" successes="10" examples="10"></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-results timestamp="1453627781665"><result location="de.htwg.mps.Model.GameRuleControllerSpec (GameRuleControllerSpec.scala:54)" id="-845055579"><stats time="18" expectations="1" failures="1" examples="1"></stats></result>
+</de.htwg.mps.Model.GameRuleControllerSpec-results>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1453627781716"><stats time="46" expectations="10" failures="1" successes="9" examples="10"><trend><stats time="46" failures="1" successes="-1"></stats></trend></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
+<de.htwg.mps.Model.GameRuleControllerSpec-stats timestamp="1453627849242"><stats time="41" expectations="10" successes="10" examples="10"><trend><stats time="41" failures="-1" successes="1"></stats></trend></stats></de.htwg.mps.Model.GameRuleControllerSpec-stats>
